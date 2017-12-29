@@ -1,0 +1,237 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.mt{
+	margin: 50px 0;
+}
+.sys-tab1 .layui-this{
+	background-color: #ededed !important;
+	border-color: #e6e6e6 !important;
+	color: #12756c !important;
+	font-weight: bold;
+}
+.sys-tab1{
+	background-color: #fff !important;
+	box-shadow: 0px 0px 2px #ccc;
+	height: 45px !important;
+	position: fixed;
+}
+.sys-tab1 .layui-this:after{
+	border-bottom-color:#EDEDED !important;
+}
+.sys-tab1>li{
+	line-height: 47px !important;
+}
+.sys-content{
+	min-height: 600px;
+}
+.sys-content .layui-tab-item{
+	margin-left: 200px;
+	margin-top: 86px;
+}
+.inp{
+	display: inline-block;
+	vertical-align: top;
+}
+.layui-form-select{
+     float: left;
+    width: 110px;
+	
+}
+.inp label{
+	display: block;
+	padding: 0 20px 0 35px;
+	line-height: 35px;
+	float: left;
+}
+.inp select,.inp input{
+	display: block;
+	float: left;
+}
+.inp input{
+	min-width: 110px;
+	max-width: 150px;
+}
+.table1{
+	width: 1000px!important;
+	color: #333 !important;
+}
+.table2{
+	width: 1320px !important;
+	color: #333 !important;
+}
+.table1 th,.table2 th{
+	font-size: 16px !important;
+	text-align: center !important;
+	height: 26px;
+}
+.table1 td{
+	text-align: center !important;
+	width: 25%;
+}
+.table2 td{
+	text-align: center !important;
+	width: 220px;
+}
+.table1 .layui-select-title .layui-unselect,.table2 .layui-select-title .layui-unselect{
+	border: 0;
+	height: auto !important;
+}
+.table1 tbody tr:hover{background-color: #fff !important;}
+.table2 tbody tr:hover{background-color: #fff !important;}
+.table1 .layui-form-select dl,.table2 .layui-form-select dl{top: 30px;}
+.layui-form-select dl dd.layui-this{
+	background-color:#009688 !important;
+}
+.table1 .layui-btn-sm,.table2 .layui-btn-sm{
+	padding: 0 15px !important;
+}
+/*分页*/
+#page{
+	text-align: center;
+}
+#page a, #page span,.page-spr{
+	margin-left: 20px !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.page-spr{
+	border: none;
+}
+#page .page-click{
+	background-color: #009688;
+	color: #fff;
+}
+/*选项卡3*/
+.object{
+	max-width: 1250px;
+	overflow: hidden;
+}
+.object>li{
+	text-align: center;
+	display: block;
+	float: left;
+	padding: 0 50px;
+    height:60px;
+    line-height: 60px;
+    background-color:#e5e5e5;
+    border: 1px solid #ddd;
+    border-left: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.object>li:first-child{
+	border-left:1px solid #e5e5e5;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.object>li:last-child{
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.check-bg{
+	background-color: #12756c !important;
+	color: #fff;
+}
+.obj-form{
+	display: block;
+}
+.obj-inp{
+	background: url(../images/plus/object.png) 8px center no-repeat;
+	padding-left: 35px !important;
+	width: 370px !important;
+	float: left;
+	margin-right: 35px;
+}
+.obj-bel{
+	display: block;
+	float: left;
+	width: 55px;
+	line-height: 38px;
+}
+.obj-form form span{
+	display: inline-block;
+	margin-left: 75px;
+	color: red;
+}
+.obj-content ul li{
+	width: 130px;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	position: relative;
+	background-color: #ededed;
+	border-radius: 5px;
+	float: left;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.obj-content ul li i{
+	position: absolute;
+	top: 34px;
+	left: 50px;
+	color: #ededed;
+	line-height: 25px;
+	height: 25px;
+	font-size: 25px;
+}
+.li1{border: 1px solid #1aa195;}
+.li2{border: 1px solid #1a8fe7;}
+.li3{border: 1px solid #ff9a00;}
+.li4{border: 1px solid #fd7285;}
+.li1-click{
+	background-color: #1aa195 !important;
+	color: #fff;
+}
+.li1-i{
+	color: #1aa195 !important;
+}
+.li2-click{
+	background-color: #1a8fe7 !important;
+	color: #fff;
+}
+.li2-i{
+	color: #1a8fe7 !important;
+}
+.li3-click{
+	background-color: #ff9a00 !important;
+	color: #fff;
+}
+.li3-i{
+	color: #ff9a00 !important;
+}
+.li4-click{
+	background-color: #fd7285 !important;
+	color: #fff;
+}
+.li4-i{
+	color: #fd7285 !important;
+}
+.obj-text{
+	margin-top: 50px;
+}
+.obj-text .text-box{
+	display: none;
+	font-size: 14px;
+	line-height: 24px;
+	color: #333;
+	text-align: left;
+}
+.cate{
+	max-width: 1250px;
+}
+.cate .obj-tab-item{
+	display: none;
+}
