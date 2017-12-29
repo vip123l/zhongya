@@ -7,6 +7,14 @@
 .mt{
 	margin: 50px 0;
 }
+.form1-wid{
+	width: 1000px;
+	display: block;
+}
+.form2-wid{
+	width: 1320px;
+	display: block;
+}
 .sys-tab1 .layui-this{
 	background-color: #ededed !important;
 	border-color: #e6e6e6 !important;
@@ -32,6 +40,16 @@
 	margin-left: 200px;
 	margin-top: 86px;
 }
+.tj-btn{
+	float: right;
+	margin-right: 30px;
+	padding: 0 13px !important;
+}
+.bm-btn{
+	float: right;
+	margin-right: 30px;
+	padding: 0 13px !important;
+}
 .inp{
 	display: inline-block;
 	vertical-align: top;
@@ -43,7 +61,7 @@
 }
 .inp label{
 	display: block;
-	padding: 0 20px 0 35px;
+	padding: 0 20px 0 45px;
 	line-height: 35px;
 	float: left;
 }
