@@ -37,7 +37,7 @@
 	min-height: 600px;
 }
 .sys-content .layui-tab-item{
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-top: 86px;
 }
 .tj-btn{
@@ -54,10 +54,14 @@
 	display: inline-block;
 	vertical-align: top;
 }
-.layui-form-select{
+.top-search .layui-form-select{
      float: left;
+    width: 110px;	
+}
+.table1 .layui-form-select{    
     width: 110px;
-	
+    display: block;
+    margin: 0 auto	
 }
 .inp label{
 	display: block;
@@ -89,6 +93,7 @@
 .table1 td{
 	text-align: center !important;
 	width: 25%;
+	padding: 5px 15px !important
 }
 .table2 td{
 	text-align: center !important;
