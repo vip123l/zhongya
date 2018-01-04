@@ -7,6 +7,10 @@
 .mt{
 	margin: 50px 0;
 }
+.inp input,.layer-form input{border-radius: 5px !important;}
+.layui-btn{
+	border-radius: 5px !important;
+}
 .form1-wid{
 	width: 1000px;
 	display: block;
@@ -42,12 +46,12 @@
 }
 .tj-btn{
 	float: right;
-	margin-right: 30px;
+	margin-right: 54px;
 	padding: 0 13px !important;
 }
 .bm-btn{
 	float: right;
-	margin-right: 30px;
+	margin-right: 45px;
 	padding: 0 13px !important;
 }
 .inp{
@@ -93,7 +97,7 @@
 .table1 td{
 	text-align: center !important;
 	width: 25%;
-	padding: 5px 15px !important
+	padding: 2px 15px !important
 }
 .table2 td{
 	text-align: center !important;
@@ -101,11 +105,9 @@
 }
 .table1 .layui-select-title .layui-unselect,.table2 .layui-select-title .layui-unselect{
 	border: 0;
-	height: auto !important;
 }
-.table1 tbody tr:hover{background-color: #fff !important;}
-.table2 tbody tr:hover{background-color: #fff !important;}
-.table1 .layui-form-select dl,.table2 .layui-form-select dl{top: 30px;}
+.table1 tbody tr:hover{background: none !important;}
+.table2 tbody tr:hover{background: none !important;}
 .layui-form-select dl dd.layui-this{
 	background-color:#009688 !important;
 }
@@ -115,6 +117,7 @@
 /*分页*/
 #page{
 	text-align: center;
+	margin-top: 50px;
 }
 #page a, #page span,.page-spr{
 	margin-left: 20px !important;
@@ -257,4 +260,49 @@
 }
 .cate .obj-tab-item{
 	display: none;
+}
+.layer-del .layui-layer-title,.add-layer .layui-layer-title{
+	background-color: #1E9FFF;
+	color: #fff;
+}
+.layer-del .layui-layer-close{
+	display:none !important;
+}
+.add-zy,.add-bk{
+	display: none;
+}
+.layer-form label{
+	padding: 0 20px;
+	line-height: 35px;
+	font-size: 14px;
+	float: left;
+	margin: 30px 0;
+}
+.layer-form .layui-form-select{
+	width: 110px;
+	float: left;
+	margin: 30px 0;
+}
+.layer-form textarea{
+	width: 630px;
+	height: 140px;
+	line-height: 20px;
+	border: 1px solid #d2d2d2;
+}
+.font-red{
+	float: left;
+	margin-left: 68px;
+	margin-top: 5px;
+	color: red;
+	font-size: 14px;
+}
+.add-layer .layui-layer-ico{
+	background-position:center !important;
+	background: url(../images/plus/cha.png) no-repeat;
+}
+.add-layer .layui-layer-btn{
+	padding-top: 0 !important;
+}
+.layer-form textarea.alert-text{
+	height: 460px;
 }

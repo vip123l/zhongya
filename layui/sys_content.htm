@@ -16,10 +16,10 @@
 
 	<body class="layui-layout-body">
 		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-		<!--[if lt IE 9]>
-	  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-	  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+			<!--[if lt IE 9]>
+		    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+		    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
 		<div class="layui-layout layui-layout-admin">
 
@@ -286,8 +286,8 @@
 					<div class="layui-tab-content sys-content">
 						<!--添加专业内容-->
 						<div class="layui-tab-item layui-show">
-							<form class="layui-form mt form-wid top-search">
-								<button class="layui-btn">添加专业</button>
+							<form class="layui-form mt form1-wid top-search">
+								<a class="layui-btn zy">添加专业</a>
 								<div class="inp">
 									<label>类别</label>
 									<select>
@@ -311,6 +311,31 @@
 								</div>
 								<button class="layui-btn tj-btn">查询</button>
 							</form>
+							<!--添加专业弹窗-->
+							<div class="add-zy">
+								<form  class="layui-form">
+									<div class="layer-form">
+										<label>类别</label>
+										<select>
+											<option value="一级建造师">请选择</option>
+											<option value="二级建造师">请选择</option>
+										</select>
+									</div>
+									<div class="layer-form">
+										<label>项目</label>
+										<select>
+											<option value="一级建造师">请选择</option>
+											<option value="二级建造师">请选择</option>
+										</select>
+									</div>
+									<div style="clear: both;"></div>
+									<div class="layer-form">
+										<label>专业</label>
+										<textarea name=""></textarea>
+									</div>
+								</form>
+								<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
+							</div>
 							<table class="layui-table table1">
 								<thead>
 									<tr>
@@ -324,28 +349,28 @@
 									<tr>
 										<td>工程及工程经济</td>
 										<td>
-											<form class="layui-form">
-												<span>
-									<select>
-										<option value="一级建造师">一级建造师</option>
-										<option value="二级建造师">二级建造师</option>
-									</select>
-								</span>
-											</form>
+										<form class="layui-form">
+											<span>
+												<select>
+													<option value="一级建造师">一级建造师</option>
+													<option value="二级建造师">二级建造师</option>
+												</select>
+											</span>
+										</form>
 										</td>
 										<td>
-											<form class="layui-form">
-												<span>
-									<select>
-										<option value="一级建造师">一级建造师</option>
-										<option value="二级建造师">二级建造师</option>
-									</select>
-								</span>
-											</form>
+										<form class="layui-form">
+											<span>
+												<select>
+													<option value="一级建造师">一级建造师</option>
+													<option value="二级建造师">二级建造师</option>
+												</select>
+											</span>
+										</form>
 										</td>
 										<td>
-											<button class="layui-btn layui-btn-sm layui-btn-normal">编辑</button>
-											<button class="layui-btn layui-btn-sm layui-btn-warm" style="margin-left: 30px;">删除</button>
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
 										</td>
 									</tr>
 									<tr>
@@ -371,17 +396,17 @@
 											</form>
 										</td>
 										<td>
-											<button class="layui-btn layui-btn-sm layui-btn-normal">编辑</button>
-											<button class="layui-btn layui-btn-sm layui-btn-warm" style="margin-left: 30px;">删除</button>
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
 										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<!--添加报名条件部分-->
+						<!--添加报考条件部分-->
 						<div class="layui-tab-item">
 							<form class="layui-form mt form2-wid  top-search">
-								<button class="layui-btn">添加报名条件</button>
+								<a class="layui-btn alert-bm">添加报考条件</a>
 								<div class="inp">
 									<label>类别</label>
 									<select>
@@ -405,6 +430,30 @@
 								</div>
 								<button class="layui-btn bm-btn">查询</button>
 							</form>
+							<!--添加报考条件弹窗-->
+							<div class="add-bk">
+								<form  class="layui-form">
+									<div class="layer-form">
+										<label>类别</label>
+										<select>
+											<option value="一级建造师">请选择</option>
+											<option value="二级建造师">请选择</option>
+										</select>
+									</div>
+									<div class="layer-form">
+										<label>项目</label>
+										<select>
+											<option value="一级建造师">请选择</option>
+											<option value="二级建造师">请选择</option>
+										</select>
+									</div>
+									<div style="clear: both;"></div>
+									<div class="layer-form">
+										<label>专业</label>
+										<textarea class="alert-text"></textarea>
+									</div>
+								</form>
+							</div>
 							<table class="layui-table table2">
 								<thead>
 									<tr>
@@ -424,8 +473,8 @@
 										<td>2017-12-10 14:32:00</td>
 										<td>2017-12-10 14:32:00</td>
 										<td>
-											<button class="layui-btn layui-btn-sm layui-btn-normal">编辑</button>
-											<button class="layui-btn layui-btn-sm layui-btn-warm" style="margin-left: 30px;">删除</button>
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
 										</td>
 									</tr>
 									<tr>
@@ -435,8 +484,8 @@
 										<td>2017-12-10 14:32:00</td>
 										<td>2017-12-10 14:32:00</td>
 										<td>
-											<button class="layui-btn layui-btn-sm layui-btn-normal">编辑</button>
-											<button class="layui-btn layui-btn-sm layui-btn-warm" style="margin-left: 30px;">删除</button>
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
 										</td>
 									</tr>
 								</tbody>
