@@ -30,7 +30,7 @@ layui.use('form', function(){
 			btn: ['确定'],
 			skin: 'add-layer', 
 			area: ['720px', '410px'], //宽高
-			content: $('.add-zy').html(),
+			content: $('.add-zy'),
 			success:function(){
 				form.render('select')
 			}
