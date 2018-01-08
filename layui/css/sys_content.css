@@ -12,11 +12,11 @@
 	border-radius: 5px !important;
 }
 .form1-wid{
-	width: 1000px;
+	width: 80%;
 	display: block;
 }
 .form2-wid{
-	width: 1320px;
+	width: 80%;
 	display: block;
 }
 .sys-tab1 .layui-this{
@@ -41,17 +41,17 @@
 	min-height: 600px;
 }
 .sys-content .layui-tab-item{
-	margin-left: 100px;
+	margin-left: 200px;
 	margin-top: 86px;
 }
 .tj-btn{
 	float: right;
-	margin-right: 54px;
+	margin-right: 40px;
 	padding: 0 13px !important;
 }
 .bm-btn{
 	float: right;
-	margin-right: 45px;
+	margin-right: 41px;
 	padding: 0 13px !important;
 }
 .inp{
@@ -82,11 +82,11 @@
 	max-width: 150px;
 }
 .table1{
-	width: 1000px!important;
+	width: 80% !important;
 	color: #333 !important;
 }
 .table2{
-	width: 1320px !important;
+	width:80% !important;
 	color: #333 !important;
 }
 .table1 th,.table2 th{
@@ -96,12 +96,13 @@
 }
 .table1 td{
 	text-align: center !important;
-	width: 25%;
 	padding: 2px 15px !important
 }
 .table2 td{
 	text-align: center !important;
-	width: 220px;
+}
+.table1 .td-btn,.table2 .td-btn{
+	width: 190px !important;
 }
 .table1 .layui-select-title .layui-unselect,.table2 .layui-select-title .layui-unselect{
 	border: 0;
@@ -118,6 +119,7 @@
 #page{
 	text-align: center;
 	margin-top: 50px;
+	width: 80%;
 }
 #page a, #page span,.page-spr{
 	margin-left: 20px !important;
@@ -256,7 +258,7 @@
 	text-align: left;
 }
 .cate{
-	max-width: 1250px;
+	max-width: 80%;
 }
 .cate .obj-tab-item{
 	display: none;
