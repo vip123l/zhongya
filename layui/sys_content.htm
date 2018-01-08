@@ -312,31 +312,7 @@
 								</div>
 								<button class="layui-btn tj-btn">查询</button>
 							</form>
-							<!--添加专业弹窗-->
-							<div class="add-zy">
-								<form class="layui-form">
-									<div class="layer-form">
-										<label>类别</label>
-										<select>
-											<option value="一级建造师">请选择</option>
-											<option value="二级建造师">请选择</option>
-										</select>
-									</div>
-									<div class="layer-form">
-										<label>项目</label>
-										<select>
-											<option value="一级建造师">请选择</option>
-											<option value="二级建造师">请选择</option>
-										</select>
-									</div>
-									<div style="clear: both;"></div>
-									<div class="layer-form set1">
-										<label>专业</label>
-										<textarea id="font-set1" style="width: 630px;"></textarea>
-									</div>
-								</form>
-								<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
-							</div>
+
 							<table class="layui-table table1">
 								<thead>
 									<tr>
@@ -587,6 +563,35 @@
 			</div>
 
 		</div>
+
+
+		<!--页面把涉及的弹层都放在body第一级里-->
+		<!--添加专业弹窗-->
+		<div class="add-zy">
+			<form class="layui-form">
+				<div class="layer-form">
+					<label>类别</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div class="layer-form">
+					<label>项目</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="layer-form set1">
+					<label>专业</label>
+					<textarea id="font-set1" style="width: 630px;"></textarea>
+				</div>
+			</form>
+			<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
+		</div>
+
 
 		<script type="text/javascript" src="layui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>
