@@ -46,11 +46,11 @@ layui.use(['form','layedit','layer'] ,function(){
 			area: ['910px', '660px'], //宽高
 			content: $('.add-bk'),
 		});
-		//添加专业富文本编辑器
-		  layedit.build('font-set2', {
-		    tool: ['strong','italic', '|', 'left', 'center', 'right']
-		    ,height: 400
-		  }); //建立编辑器
+//		//添加专业富文本编辑器
+//		  layedit.build('font-set2', {
+//		    tool: ['strong','italic', '|', 'left', 'center', 'right']
+//		    ,height: 400
+//		  }); //建立编辑器
 	});
 	//	删除弹框	
 	$('.delete').on('click',function(){
@@ -60,6 +60,24 @@ layui.use(['form','layedit','layer'] ,function(){
 			skin: 'layer-del',
 		});
 	})
+	
+		//添加专业内复选框
+		$('.add-check .check-title').click(function () {
+		    if ($('.check-box').css('display') == "none") {
+		        $('.check-box').css('display', 'block');
+		    }
+		    else {
+		        $('.check-box').css('display', 'none');
+		    }
+		});
+		$('.check-box input[type="checkbox"]').click(function () {
+				form.on('checkbox(test)', function(data){
+				  console.log(data.elem.checked); //是否被选中，true或者false
+				  console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+				}); 
+		    })
+	
+
 });	
 
 
