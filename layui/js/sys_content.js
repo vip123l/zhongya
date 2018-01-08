@@ -29,7 +29,7 @@ layui.use('form', function(){
 			title:'添加专业',
 			btn: ['确定'],
 			skin: 'add-layer', 
-			area: ['720px', '360px'], //宽高
+			area: ['720px', '410px'], //宽高
 			content: $('.add-zy').html(),
 			success:function(){
 				form.render('select')
@@ -37,6 +37,12 @@ layui.use('form', function(){
 		});
 	});
 });	
+
+//添加专业富文本编辑器
+layui.use('layedit', function(){
+  var layedit = layui.layedit;
+  layedit.build('font-set1',{ height:140}); //建立编辑器
+});
 
 	//  添加报名考件弹框
 layui.use('form', function(){
@@ -47,7 +53,7 @@ layui.use('form', function(){
 			title:'添加报名考件',
 			btn: ['确定'],
 			skin: 'add-layer', 
-			area: ['720px', '660px'], //宽高
+			area: ['910px', '660px'], //宽高
 			content: $('.add-bk').html(),
 			success:function(){
 				form.render('select')
@@ -56,9 +62,16 @@ layui.use('form', function(){
 	});
 });
 
+//添加专业富文本编辑器
+layui.use('layedit', function(){
+  var layedit = layui.layedit;
+  layedit.build('font-set2',{ height:400}); //建立编辑器
+});
+
+
+//	删除弹框
 layui.use('layer', function(){
     var layer = layui.layer;
-    //	删除弹框
 	$('.delete').on('click',function(){
 		layer.confirm('确定要删除此条内容吗？', {
 			title: '删除',
