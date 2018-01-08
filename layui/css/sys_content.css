@@ -1,3 +1,5 @@
+body,a,input{
+	font-family: "微软雅黑" !important;color: #333;}
 .fl{
 	float: left;
 }
@@ -7,16 +9,32 @@
 .mt{
 	margin: 50px 0;
 }
-.inp input,.layer-form input{border-radius: 5px !important;}
+.inp input,.layer-form input{border-radius: 5px !important;color: #333;}
 .layui-btn{
 	border-radius: 5px !important;
 }
+/*弹框按钮大小*/
+.layui-layer-btn0,.layui-layer-btn1{
+	height: 35px !important;
+	line-height: 35px !important;
+	border-radius: 5px !important;
+	border: none !important;
+}
+.layui-layer-btn0{
+	background-color: #1a8fe7 !important;
+}
+.editor{
+	background-color: #1a8fe7 !important;
+}
+.delete{
+	background-color: #ff9a00 !important;
+}
 .form1-wid{
-	width: 80%;
+	width: 95%;
 	display: block;
 }
 .form2-wid{
-	width: 80%;
+	width: 95%;
 	display: block;
 }
 .sys-tab1 .layui-this{
@@ -39,15 +57,15 @@
 }
 .sys-content{
 	min-height: 600px;
+	padding: 0 !important;
 }
 .sys-content .layui-tab-item{
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-top: 86px;
 }
 .tj-btn{
 	float: right;
 	margin-right: 40px;
-	padding: 0 13px !important;
 }
 .bm-btn{
 	float: right;
@@ -58,18 +76,25 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.top-search .layui-btn,.obj-form .layui-btn{
+	height: 35px;
+	line-height: 35px;
+	font-weight: bold;
+	padding: 0 13px;
+	background-color: #1aa195 !important;
+}
 .top-search .layui-form-select{
      float: left;
-    width: 110px;	
+    width: 150px;	
 }
 .table1 .layui-form-select{    
-    width: 110px;
+    width: 150px;
     display: block;
     margin: 0 auto	
 }
 .inp label{
 	display: block;
-	padding: 0 20px 0 45px;
+	padding: 0 15px 0 35px;
 	line-height: 35px;
 	float: left;
 }
@@ -77,29 +102,32 @@
 	display: block;
 	float: left;
 }
-.inp input{
-	min-width: 110px;
-	max-width: 150px;
+.inp input,.layer-form input{
+	width: 150px;
+	height: 35px;
 }
 .table1{
-	width: 80% !important;
+	width: 95% !important;
 	color: #333 !important;
 }
 .table2{
-	width:80% !important;
+	width:95% !important;
 	color: #333 !important;
 }
 .table1 th,.table2 th{
 	font-size: 16px !important;
 	text-align: center !important;
 	height: 26px;
+	color: #333;
 }
 .table1 td{
 	text-align: center !important;
-	padding: 2px 15px !important
+	padding: 2px 15px !important;
+	color: #333;
 }
 .table2 td{
 	text-align: center !important;
+	color: #333;
 }
 .table1 .td-btn,.table2 .td-btn{
 	width: 190px !important;
@@ -110,16 +138,18 @@
 .table1 tbody tr:hover{background: none !important;}
 .table2 tbody tr:hover{background: none !important;}
 .layui-form-select dl dd.layui-this{
-	background-color:#009688 !important;
+	background-color:#1aa195 !important;
 }
 .table1 .layui-btn-sm,.table2 .layui-btn-sm{
-	padding: 0 15px !important;
+	padding: 0 13px !important;
+	font-weight: bold;
+	font-size: 14px;
 }
 /*分页*/
 #page{
 	text-align: center;
 	margin-top: 50px;
-	width: 80%;
+	width: 95%;
 }
 #page a, #page span,.page-spr{
 	margin-left: 20px !important;
@@ -139,21 +169,21 @@
 	border: none;
 }
 #page .page-click{
-	background-color: #009688;
+	background-color: #1aa195;
 	color: #fff;
 }
 /*选项卡3*/
 .object{
-	max-width: 1250px;
+	max-width: 95%;
 	overflow: hidden;
 }
 .object>li{
 	text-align: center;
 	display: block;
 	float: left;
-	padding: 0 50px;
-    height:60px;
-    line-height: 60px;
+	width: 205px;
+    height:58px;
+    line-height: 58px;
     background-color:#e5e5e5;
     border: 1px solid #ddd;
     border-left: 0;
@@ -170,6 +200,7 @@
 	border-top-right-radius: 5px;
 }
 .check-bg{
+	font-weight: bold;
 	background-color: #12756c !important;
 	color: #fff;
 }
@@ -180,8 +211,10 @@
 	background: url(../images/plus/object.png) 8px center no-repeat;
 	padding-left: 35px !important;
 	width: 370px !important;
+	height: 35px !important;
 	float: left;
 	margin-right: 35px;
+	border-radius: 5px !important;
 }
 .obj-bel{
 	display: block;
@@ -222,6 +255,7 @@
 .li1-click{
 	background-color: #1aa195 !important;
 	color: #fff;
+	font-weight: bold;
 }
 .li1-i{
 	color: #1aa195 !important;
@@ -229,6 +263,7 @@
 .li2-click{
 	background-color: #1a8fe7 !important;
 	color: #fff;
+	font-weight: bold;
 }
 .li2-i{
 	color: #1a8fe7 !important;
@@ -236,6 +271,7 @@
 .li3-click{
 	background-color: #ff9a00 !important;
 	color: #fff;
+	font-weight: bold;
 }
 .li3-i{
 	color: #ff9a00 !important;
@@ -243,6 +279,7 @@
 .li4-click{
 	background-color: #fd7285 !important;
 	color: #fff;
+	font-weight: bold;
 }
 .li4-i{
 	color: #fd7285 !important;
@@ -258,13 +295,13 @@
 	text-align: left;
 }
 .cate{
-	max-width: 80%;
+	max-width: 95%;
 }
 .cate .obj-tab-item{
 	display: none;
 }
 .layer-del .layui-layer-title,.add-layer .layui-layer-title{
-	background-color: #1E9FFF;
+	background-color: #1a8fe7;
 	color: #fff;
 }
 .layer-del .layui-layer-close{
@@ -281,12 +318,11 @@
 	margin: 30px 0;
 }
 .layer-form .layui-form-select{
-	width: 110px;
+	width: 150px;
 	float: left;
 	margin: 30px 0;
 }
 .layer-form textarea{
-	width: 630px;
 	height: 140px;
 	line-height: 20px;
 	border: 1px solid #d2d2d2;
@@ -304,7 +340,17 @@
 }
 .add-layer .layui-layer-btn{
 	padding-top: 0 !important;
+	padding-bottom: 20px;
 }
 .layer-form textarea.alert-text{
 	height: 460px;
+	width: 820px;
+}
+.set1 .layui-layedit{
+	width: 628px;
+	float: left;
+}
+.set2 .layui-layedit{
+	width: 818px;
+	float: left;
 }
