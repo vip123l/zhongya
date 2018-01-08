@@ -563,7 +563,7 @@
 				<div style="clear: both;"></div>
 				<div class="layer-form set1">
 					<label>专业</label>
-					<textarea style="width: 630px;"></textarea>
+					<script id="editor" type="text/plain"></script>
 				</div>
 			</form>
 			<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
@@ -589,8 +589,6 @@
 				<div style="clear: both;"></div>
 				<div class="layer-form set2">
 					<label>内容</label>
-					<script id="editor" type="text/plain" style="width:800px;height:500px;"></script>
-
 				</div>
 			</form>
 		</div>
@@ -599,6 +597,11 @@
 		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/sys_content.js" charset="utf-8"></script>
+		<script type="text/javascript" src="editor/ueditor.config.js" charset="utf-8"></script>
+		<script type="text/javascript" src="editor/ueditor.all.js" charset="utf-8"></script>
+		<script type="text/javascript">
+        	var ue = UE.getEditor('editor');
+		</script>
 	</body>
 
 </html>
