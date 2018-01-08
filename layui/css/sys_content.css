@@ -14,19 +14,24 @@ body,a,input{
 	border-radius: 5px !important;
 }
 /*弹框按钮大小*/
-.layui-layer-btn0,.layui-layer-btn1{
-	height: 35px !important;
-	line-height: 35px !important;
+.layer-del .layui-layer-btn0,.layer-del .layui-layer-btn1{
+	height: 33px !important;
+	line-height: 33px !important;
 	border-radius: 5px !important;
-	border: none !important;
+	padding: 0 13px !important;
+	margin-top: 0 !important;
 }
-.layui-layer-btn0{
-	background-color: #1a8fe7 !important;
+.layer-del .layui-layer-btn0{
+	background-color: #ff9a00 !important;
+	border: 1px solid #ff9a00 !important;
 }
-.editor{
-	background-color: #1a8fe7 !important;
+.layer-del .layui-layer-btn1{
+	margin-left: 15px !important;
 }
-.delete{
+.layer-del .editor{
+	background-color: #ff9a00 !important;
+}
+.layer-del .delete{
 	background-color: #ff9a00 !important;
 }
 .form1-wid{
@@ -181,7 +186,7 @@ body,a,input{
 	text-align: center;
 	display: block;
 	float: left;
-	width: 205px;
+	width: 195px;
     height:58px;
     line-height: 58px;
     background-color:#e5e5e5;
@@ -300,9 +305,16 @@ body,a,input{
 .cate .obj-tab-item{
 	display: none;
 }
-.layer-del .layui-layer-title,.add-layer .layui-layer-title{
+.layer-del .layui-layer-title{
+	background-color: #ff9a00;
+	color: #fff;
+}
+.add-layer .layui-layer-title{
 	background-color: #1a8fe7;
 	color: #fff;
+}
+.layer-del .layui-layer-content{
+	text-align: center;
 }
 .layer-del .layui-layer-close{
 	display:none !important;

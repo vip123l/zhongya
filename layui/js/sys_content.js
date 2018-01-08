@@ -21,57 +21,38 @@ $(function(){
 	});
 
 	//  添加专业弹框
-layui.use('form', function(){
-	var form = layui.form;
+layui.use(['form','layedit','layer'] ,function(){
+	var form = layui.form,
+	layedit = layui.layedit,
+	layer = layui.layer;
 	$('.zy,.table1 .editor').on('click',function(){
 		layer.open({
 			type: 1,
 			title:'添加专业',
 			btn: ['确定'],
 			skin: 'add-layer', 
-			area: ['720px', '410px'], //宽高
+			area: ['720px', '370px'], //宽高
 			content: $('.add-zy'),
-			success:function(){
-				form.render('select')
-			}
 		});
 	});
-});	
-
-//添加专业富文本编辑器
-layui.use('layedit', function(){
-  var layedit = layui.layedit;
-  layedit.build('font-set1',{ height:140}); //建立编辑器
-});
 
 	//  添加报名考件弹框
-layui.use('form', function(){
-	var form = layui.form;
 	$('.alert-bm,.table2 .editor').on('click',function(){
 		layer.open({
 			type: 1,
-			title:'添加报名考件',
+			title:'添加报名条件',
 			btn: ['确定'],
 			skin: 'add-layer', 
 			area: ['910px', '660px'], //宽高
-			content: $('.add-bk').html(),
-			success:function(){
-				form.render('select')
-			}
+			content: $('.add-bk'),
 		});
+		//添加专业富文本编辑器
+		  layedit.build('font-set2', {
+		    tool: ['strong','italic', '|', 'left', 'center', 'right']
+		    ,height: 400
+		  }); //建立编辑器
 	});
-});
-
-//添加专业富文本编辑器
-layui.use('layedit', function(){
-  var layedit = layui.layedit;
-  layedit.build('font-set2',{ height:400}); //建立编辑器
-});
-
-
-//	删除弹框
-layui.use('layer', function(){
-    var layer = layui.layer;
+	//	删除弹框	
 	$('.delete').on('click',function(){
 		layer.confirm('确定要删除此条内容吗？', {
 			title: '删除',
@@ -79,7 +60,8 @@ layui.use('layer', function(){
 			skin: 'layer-del',
 		});
 	})
-}); 
+});	
+
 
 	// 点击变换不同背景颜色
 	$('.obj-title .li1').click(function(){

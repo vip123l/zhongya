@@ -279,7 +279,7 @@
 					<div style="position: fixed;width: 100%;z-index: 111;">
 						<ul class="layui-tab-title sys-tab1">
 							<li class="layui-this">添加专业</li>
-							<li>添加报考条件</li>
+							<li>添加报名条件</li>
 							<li>报考条件查询</li>
 						</ul>
 					</div>
@@ -380,10 +380,10 @@
 								</tbody>
 							</table>
 						</div>
-						<!--添加报考条件部分-->
+						<!--添加报名条件部分-->
 						<div class="layui-tab-item">
 							<form class="layui-form mt form2-wid  top-search">
-								<a class="layui-btn alert-bm">添加报考条件</a>
+								<a class="layui-btn alert-bm">添加报名条件</a>
 								<div class="inp">
 									<label>类别</label>
 									<select>
@@ -407,30 +407,7 @@
 								</div>
 								<button class="layui-btn bm-btn">查询</button>
 							</form>
-							<!--添加报考条件弹窗-->
-							<div class="add-bk">
-								<form class="layui-form">
-									<div class="layer-form">
-										<label>类别</label>
-										<select>
-											<option value="一级建造师">请选择</option>
-											<option value="二级建造师">请选择</option>
-										</select>
-									</div>
-									<div class="layer-form">
-										<label>项目</label>
-										<select>
-											<option value="一级建造师">请选择</option>
-											<option value="二级建造师">请选择</option>
-										</select>
-									</div>
-									<div style="clear: both;"></div>
-									<div class="layer-form set2">
-										<label>内容</label>
-										<textarea id="font-set2" class="alert-text"></textarea>
-									</div>
-								</form>
-							</div>
+							
 							<table class="layui-table table2">
 								<thead>
 									<tr>
@@ -505,13 +482,13 @@
 									<div class="obj-content mt">
 										<!--每个li点击添加对应的liN-click和对应的i加上liN-i，默认选第一个，四个颜色一循环-->
 										<ul class="obj-title">
-											<li class="li1">
+											<li class="li1 li1-click">
+												一级建造
+												<i class="layui-icon  li1-i">&#xe625;</i>
+											</li>
+											<li class="li2">
 												一级建造
 												<i class="layui-icon">&#xe625;</i>
-											</li>
-											<li class="li2 li2-click">
-												一级建造
-												<i class="layui-icon  li2-i">&#xe625;</i>
 											</li>
 											<li class="li3">
 												一级建造
@@ -586,12 +563,37 @@
 				<div style="clear: both;"></div>
 				<div class="layer-form set1">
 					<label>专业</label>
-					<textarea id="font-set1" style="width: 630px;"></textarea>
+					<textarea style="width: 630px;"></textarea>
 				</div>
 			</form>
 			<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
 		</div>
+		
+		<!--添加报名条件弹窗-->
+		<div class="add-bk">
+			<form class="layui-form">
+				<div class="layer-form">
+					<label>类别</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div class="layer-form">
+					<label>项目</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="layer-form set2">
+					<label>内容</label>
+					<script id="editor" type="text/plain" style="width:800px;height:500px;"></script>
 
+				</div>
+			</form>
+		</div>
 
 		<script type="text/javascript" src="layui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>
