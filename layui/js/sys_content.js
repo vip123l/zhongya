@@ -81,6 +81,7 @@ layui.use(['form','layedit','layer'] ,function(){
 });	
 
 
+
 	// 点击变换不同背景颜色
 	$('.obj-title .li1').click(function(){
 		$(this).addClass('li1-click');
