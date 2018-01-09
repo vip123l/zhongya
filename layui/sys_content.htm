@@ -274,7 +274,7 @@
 			<!-- 内容主体区域 -->
 			<div class="layui-body" style="color: #333;">
 				<!--二级分类切换-->
-				<div class="layui-tab layui-tab-card">
+				<div class="layui-tab layui-tab-card container">
 					<!--切换的标题-->
 					<div style="position: fixed;width: 100%;z-index: 111;">
 						<ul class="layui-tab-title sys-tab1">
@@ -307,7 +307,7 @@
 								</div>
 								<div class="inp">
 									<label>专业</label>
-									<input type="text" name="title" required lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+									<input type="text" name="title"  placeholder="请输入" autocomplete="off" class="layui-input">
 									<div style="clear: both;"></div>
 								</div>
 								<button class="layui-btn tj-btn">查询</button>
@@ -402,7 +402,7 @@
 								</div>
 								<div class="inp">
 									<label>添加人</label>
-									<input type="text" name="title" required lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+									<input type="text" name="title"  placeholder="请输入" autocomplete="off" class="layui-input">
 									<div style="clear: both;"></div>
 								</div>
 								<button class="layui-btn bm-btn">查询</button>
@@ -554,13 +554,13 @@
 					<label>项目</label>
 					<div class="add-check">
 						<div class="check-title">
-							<input type="text" placeholder="请选择一个城市" value="" readonly="" class="layui-input">
+							<input type="text" placeholder="请选择" value="" readonly="" class="layui-input">
 							<i class="layui-edge"></i>
 						</div>
-						<div class="check-box">
-							<input type="checkbox"  lay-filter="test"  name="item" value="写作" title="写作" lay-skin="primary">
-							<input type="checkbox" lay-filter="test" name="item" value="写作2" title="写作2" lay-skin="primary">
-						</div>
+						<ul class="check-box">
+							<li><input type="checkbox"  lay-filter="test"  name="item" value="写作" title="写作" lay-skin="primary"></li>
+							<li><input type="checkbox" lay-filter="test" name="item" value="写作2" title="写作2" lay-skin="primary"></li>
+						</ul>
 					</div>					
 				</div>
 				<div style="clear: both;"></div>
@@ -602,13 +602,13 @@
 		<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/sys_content.js" charset="utf-8"></script>
 		<!--编辑器js-->
-		<!--<script type="text/javascript" src="editor/ueditor.config.js" charset="utf-8"></script>
+		<script type="text/javascript" src="editor/ueditor.config.js" charset="utf-8"></script>
 		<script type="text/javascript" src="editor/ueditor.all.js" charset="utf-8"></script>
 		<script type="text/javascript">
         	var ue = UE.getEditor('editor',{
         		elementPathEnabled : false
         	});
-		</script>-->
+		</script>
 	</body>
 
 </html>
