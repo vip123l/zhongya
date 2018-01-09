@@ -70,21 +70,26 @@ layui.use(['form','layedit','layer'] ,function(){
 		        $('.check-box').css('display', 'none');
 		    }
 		});
-		$('.check-box dd').each(function () {
-			var aa = '';
-				form.on('checkbox(test)', function(data){
-					aa+=data.value;
-				    console.log(data.elem.checked); //是否被选中，true或者false
-				    console.log(data.value); //复选框value值，也可以通过data.elem.value得到
-				    form.render('checkbox');
-				}); 
-				$('.check-title .layui-input').val('aa')
-		    })
-	
 
-});	
+    form.on('checkbox(test)', function(data){
+        // console.log(data.elem.checked); //是否被选中，true或者false
+        // console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+        get_box_val();
+    });
 
+});
 
+	function get_box_val() {
+		var aa = '';
+		$('input[type=checkbox]').each(function () {
+			if($(this).prop('checked')){
+				aa+=$(this).val();
+			}
+			$('.check-title .layui-input').val(aa);
+		});
+	}
+	//页面加载完的时候先运行一下
+	get_box_val();
 
 	// 点击变换不同背景颜色
 	$('.obj-title .li1').click(function(){
