@@ -92,6 +92,8 @@ layui.use(['form','layedit','layer'] ,function(){
 			$('.check-title .layui-input').val(val);
 		});
 	}
+
+
 	//页面加载完的时候先运行一下
 	get_box_val();
 

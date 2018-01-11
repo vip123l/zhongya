@@ -1,0 +1,166 @@
+body,a,input{
+	font-family: "微软雅黑" !important;color: #333;}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+input,.layer-form input{border-radius: 5px;color: #333;}
+.layui-btn{border-radius: 5px;}
+.layui-body{
+	font-size: 14px;
+	overflow:auto ;
+}
+.my-btn{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	color: #fff;
+}
+.btn1{
+	padding: 0;
+	line-height: 28px;
+	background-color: #12756c;
+	width: 70px;
+	height: 28px;
+}
+.qd{
+	margin-left: 30px;
+}
+.body-title{
+	width: 1675px;
+	padding: 10px 25px 7px 25px;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #ccc;
+}
+.body-title .left{
+	font-weight: bold;
+	line-height: 28px;
+}
+/*顶部搜索*/
+.top-search{
+	width: 1675px;
+	padding: 0 25px;
+	margin-top: 50px;
+	position: relative;
+}
+.top-search .inp-list{
+	margin-bottom: 30px;
+}
+.top-search .inp-list li{
+	display: inline-block;
+}
+.top-search label{
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	padding: 0;
+	margin: 0 25px 0 54px;
+	text-align: right;
+}
+.top-search .inp-list li:first-child label{
+	width: 70px;
+	display: inline-block;
+	margin-left: 0;
+}
+.top-search li input{
+	width: 110px;
+	height: 35px;
+	border-radius: 5px;
+}
+#chance-time,#zp-time{
+	width: 220px;
+}
+.top-search .updown{
+	position: absolute;
+    right: 45px;
+    top: 10px;
+    cursor: pointer;
+}
+.btn-search{
+	width: 110px;
+	height: 35px;
+	margin-right: 55px;
+	background-color: #1aa195;
+}
+.layui-form-select dl dd.layui-this{
+	background-color:#1aa195
+}
+
+/*分页*/
+#page{
+	text-align: center;
+	margin-top: 50px;
+	width: 95%;
+}
+#page a, #page span,.page-spr{
+	margin-left: 20px !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.page-spr{
+	border: none;
+}
+#page .page-click{
+	background-color: #1aa195;
+	color: #fff;
+}
+/*表格*/
+.table{
+	width: 1675px;
+	padding: 0 25px;
+}
+.layui-table td{
+	text-align: center;
+}
+.layui-table th{
+	text-align: center;
+	font-weight: bold;
+}
+.layui-table thead th{
+	background-color: #eee;
+}
+.layui-table tbody tr:hover{
+	background: none;
+}
+.layui-table td, .layui-table th{
+	border-color: #e5e5e5;
+	height: 45px;
+	padding: 0 16px;
+	color: #333;
+}
+.btn-see,.btn-talk,.btn-del,.btn-tk{
+	padding: 0 7px;
+	height: 28px;
+	line-height: 28px;
+}
+.btn-see{
+	background-color: #1aa195;
+}
+.btn-talk{
+	background-color: #1a8fe7;
+}
+.btn-del{
+	background-color: #ff9a00;
+}
+.btn-tk{
+	background-color: #fd7285;
+}
+.layui-table-sort .layui-table-sort-asc{
+	border-bottom-color:#999;
+}
+.layui-table-sort .layui-table-sort-desc{
+	border-top-color:#999;
+}
