@@ -164,3 +164,198 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .layui-table-sort .layui-table-sort-desc{
 	border-top-color:#999;
 }
+/*弹框样式*/
+.layer-see .layui-layer-title{
+	background-color: #1aa195;
+	color: #fff;
+	font-weight: bold;
+}
+.layer-see table{
+	margin: 0;
+}
+.layer-see .layui-layer-ico,.layer-five .layui-layer-ico,.layer-talk .layui-layer-ico{
+	background: url(../images/plus/cha.png) no-repeat;
+	background-position: center !important;
+}
+.layer-del .layui-layer-title{
+	font-weight: bold;
+	background-color: #ff9a00;
+	color: #fff;
+}
+.layer-del .layui-layer-content{
+	line-height: 120px !important;
+	text-align: center;
+	font-size: 16px !important;
+}
+.layer-del .layui-layer-btn0,.layer-del .layui-layer-btn1,.layer-five .layui-layer-btn0,.layer-talk .layui-layer-btn0,.layer-talk .layui-layer-btn1{
+	height: 33px;
+	line-height: 33px;
+	border-radius: 5px;
+	padding: 0 13px;
+	margin-top: 0;
+}
+.layer-del .layui-layer-ico{
+	background:none !important;
+}
+.layer-del .layui-layer-btn0{
+	background-color: #ff9a00 !important;
+	border: 1px solid #ff9a00 !important;
+}
+.layer-del .layui-layer-btn1,.layer-talk .layui-layer-btn1{
+	margin-left: 15px;
+}
+.five ul{
+	overflow: hidden;
+}
+.five li{
+	width: 105px;
+	line-height: 30px;
+	height: 30px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 24px;
+	margin-top: 24px;
+	cursor: pointer;
+}
+.five-click{
+	border: 2px solid #12756c !important;
+	height: 28px !important;
+	line-height: 28px !important;
+	width: 103px !important;
+}
+.layer-five .layui-layer-title{
+	font-weight: bold;
+	background-color: #12756c;
+	color: #fff;
+}
+.layer-five .layui-layer-btn{
+	padding-bottom: 18px;
+}
+.layer-five .layui-layer-btn0{
+	background-color: #12756c !important;
+	border: 1px solid #12756c !important;
+}
+.layui-laydate-list.laydate-time-list > li{width:50% !important;}
+.layui-laydate-list.laydate-time-list > li:last-child{display:none !important;}
+/*沟通*/
+.gt-state{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.xing span{
+	color: red;
+}
+.xing{
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0 18px;
+	float: left;
+}
+.gt-state ul{
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+.gt-state li,.bz li{
+	width: 110px;
+	line-height: 33px;
+	height: 33px;
+	border: 1px solid #e6e6e6;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #666;
+}
+.bz{overflow: hidden;}
+.bz ul{
+	width: 925px;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+.bz li{
+	margin-bottom: 20px;
+}
+.bz-text{
+	padding: 15px;
+	width: 905px;
+	height: 110px;
+	box-sizing:border-box;
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	margin-left: 102px;
+}
+.next-time{
+	margin: 20px 0;
+}
+.time-box{
+	width: 150px;
+	display: block;
+	float: left;
+}
+.time-box input{border-radius: 5px;}
+.next-time .red{
+	color: red;
+	line-height: 35px;
+	margin-left: 20px;
+}
+ .blue{
+	display: inline-block;
+	width: 102px;
+	text-align: center;
+	color: #1a8fe7;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 20px 0 10px 0;
+	cursor: pointer;
+}
+.show-box{
+	display: none;
+	width: 768px;
+	margin-left: 102px;
+}
+.show-box label{
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	padding: 0;
+	margin: 0 13px 0 40px;
+	text-align: right;
+	min-width: 30px;
+}
+.show-box  li:first-child label{
+	display: inline-block;
+	margin-left: 0;
+}
+.show-box li input{
+	width: 110px;
+	height: 35px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.layer-talk .layui-layer-btn{
+	text-align: left;
+	padding-left: 135px;
+}
+.layer-talk .layui-layer-title{
+	font-weight: bold;
+	background-color: #1a8fe7;
+	color: #fff;
+}
+.action{
+	color: #1a8fe7;
+	font-weight: bold;
+}
+.action:hover{
+	color: #1a8fe7;
+}
+.lyjl{
+	width: 765px;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+}

@@ -276,7 +276,7 @@
 				<div class="body-title">
 					<div class="left fl">我的机会</div>
 					<div class="right fr">
-						<button class="layui-btn my-btn btn1">来5个</button>
+						<button class="layui-btn my-btn btn1 lw">来5个</button>
 						<button class="layui-btn my-btn btn1 qd">签到</button>
 					</div>
 				</div>
@@ -469,7 +469,208 @@
 			</div>
 
 		</div>
-
+		
+		<!--查看弹框-->
+		<div class="see">
+			<table class="layui-table">
+			  	<thead>
+			    	<tr>
+				      <th>手机号</th>
+				      <th>用户名</th>
+				      <th>所在城市</th>
+				      <th>机会来源</th>
+				      <th>成交状态</th>
+				    </tr> 
+			  	</thead>
+			  	<tbody>
+				    <tr>
+				      <td>13792623098</td>
+				      <td>张三123</td>
+				      <td>山东潍坊</td>
+				      <td>乐语</td>
+				      <td>注册未下单</td>
+				    </tr>
+			  	</tbody>
+			</table>
+		</div>
+		<!--来5个弹框-->
+		<div class="five">
+			<ul>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+				<li>一级建造师</li>
+			</ul>
+		</div>
+		<!--沟通弹框-->
+		<div class="talk">
+			<form class="layui-form">
+				<div class="gt-state">
+					<div class="xing"><span>*</span>沟通状态:</div>
+					<ul>
+						<li>关机/停机</li>
+						<li>空号</li>
+						<li>挂断</li>
+						<li>无人接</li>
+						<li>正常接通</li>
+					</ul>
+				</div>
+				<div class="bz">
+					<div class="xing"><span>*</span>备注标签:</div>
+					<ul>
+						<li>不方便，忙</li>
+						<li>工作忙</li>
+						<li>挂靠用</li>
+						<li>再考虑考虑</li>
+						<li>再联系</li>
+						<li>先了解一下</li>
+						<li>打错/搞错了</li>
+						<li>不考了</li>
+						<li>要资料</li>
+						<li>条件不符</li>
+						<li>不升班</li>
+					</ul>
+					<textarea name="" class="bz-text"></textarea>
+				</div>
+				<div class="next-time">
+					<div class="xing"><span>*</span>下次沟通:</div>
+					<div class="time-box">
+						<input type="text" class="layui-input" id="next-time" placeholder="yy-mm-dd">
+					</div>
+					<span class="red">*选择的时间到分钟</span>
+				</div>
+				<div class="jbxx">
+					<span class="blue">基本信息</span>
+					<div class="show-box">
+						<ul>
+							<li class="layui-inline">
+								<label>姓名</label>
+								<div class="fr">
+									<input type="text" class="layui-input" placeholder="请输入">
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>性别</label>
+								<div class="fr">
+									<input type="text" class="layui-input" placeholder="请输入">
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>Q Q</label>
+								<div class="fr">
+									<input type="text" class="layui-input" placeholder="请输入">
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>工作年限</label>
+								<div class="fr">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+						<ul>
+							<li class="layui-inline">
+								<label>邮箱</label>
+								<div class="fr">
+									<input type="text" class="layui-input" placeholder="请输入">
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>学历</label>
+								<div class="fr">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>意向</label>
+								<div class="fr">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+							</li>
+							<li class="layui-inline">
+								<label>报考条件</label>
+								<div class="fr">
+									<select name="">
+										<option value="">请选择</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</form>
+			<div class="gtjl">
+				<span class="blue">沟通记录</span>
+				<div class="show-box">
+					<table class="layui-table">
+						<thead>
+							<tr>
+								<th>坐席</th>
+								<th>沟通状态</th>
+								<th>备注时间</th>
+								<th>备注内容</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>杨伊_8001</td>
+								<td>正常接通</td>
+								<td>2016/9/20   17:32:20</td>
+								<td>今年不想考了，明年再说</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="gtjl">
+				<span class="blue">沟通记录</span>
+				<div class="show-box">
+					<table class="layui-table">
+						<thead>
+							<tr>
+								<th>坐席</th>
+								<th>沟通状态</th>
+								<th>通话时长（秒）</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>坐席</td>
+								<td>沟通状态</td>
+								<td>30</td>
+								<td><a href="#" class="action">播放</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="gtjl">
+				<span class="blue">乐语记录</span>
+				<div class="show-box lyjl">
+					<img src="images/plus/talk.jpg"/>
+				</div>
+			</div>
+		</div>
+		
+		
 		<script type="text/javascript" src="layui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
