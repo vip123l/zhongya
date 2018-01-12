@@ -6,6 +6,7 @@
 		<title>中业后台管理系统</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
@@ -385,7 +386,7 @@
 						<div style="clear: both;"></div>
 					</form>
 					<div class="updown">
-						<img src="images/plus/bddown.png">
+						<img src="images/plus/bdup.png">
 					</div>
 				</div>
 				<div class="table">
@@ -415,11 +416,7 @@
 								<i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i>
 							</span>
 					      </th>
-					      <th>最后沟通备注
-					      	<span class="layui-table-sort layui-inline">
-								<i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i>
-							</span>
-					      </th>
+					      <th>最后沟通备注</th>
 					      <th>下次沟通时间
 					      	<span class="layui-table-sort layui-inline">
 								<i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i>
@@ -437,12 +434,12 @@
 					    <tr>
 					      <td>13792623098</td>
 					      <td>8</td>
-					      <td>经济师</td>
+					      <td class="kc">经济就看两队交锋就师</td>
 					      <td>首页咨询</td>
 					      <td>2017-12-10  14:32:00</td>
 					      <td>2017-12-10  14:32:00</td>
 					      <td>2017-12-10  14:32:00</td>
-					      <td>再联系</td>
+					      <td title="再就快来点击放大来看里的世界疯了打开联系" class="last-bz">再就快减肥的就是来点击放大来看里的世界疯了打开联系</td>
 					      <td>2017-12-10  14:32:00</td>
 					      <td>20</td>
 					      <td>
@@ -511,7 +508,7 @@
 				<div class="gt-state">
 					<div class="xing"><span>*</span>沟通状态:</div>
 					<ul>
-						<li>关机/停机</li>
+						<li class="gt-click">关机/停机</li>
 						<li>空号</li>
 						<li>挂断</li>
 						<li>无人接</li>
@@ -521,7 +518,7 @@
 				<div class="bz">
 					<div class="xing"><span>*</span>备注标签:</div>
 					<ul>
-						<li>不方便，忙</li>
+						<li>不方便</li>
 						<li>工作忙</li>
 						<li>挂靠用</li>
 						<li>再考虑考虑</li>
@@ -623,9 +620,9 @@
 						<thead>
 							<tr>
 								<th>坐席</th>
-								<th>沟通状态</th>
-								<th>备注时间</th>
-								<th>备注内容</th>
+								<th width="25%">沟通状态</th>
+								<th width="25%">备注时间</th>
+								<th width="30%">备注内容</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -640,15 +637,15 @@
 				</div>
 			</div>
 			<div class="gtjl">
-				<span class="blue">沟通记录</span>
+				<span class="blue">通话记录</span>
 				<div class="show-box">
 					<table class="layui-table">
 						<thead>
 							<tr>
 								<th>坐席</th>
-								<th>沟通状态</th>
-								<th>通话时长（秒）</th>
-								<th>操作</th>
+								<th width="25%">沟通状态</th>
+								<th width="25%">通话时长（秒）</th>
+								<th width="30%">操作</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -656,7 +653,7 @@
 								<td>坐席</td>
 								<td>沟通状态</td>
 								<td>30</td>
-								<td><a href="#" class="action">播放</a></td>
+								<td><a class="action">播放</a></td>
 							</tr>
 						</tbody>
 					</table>

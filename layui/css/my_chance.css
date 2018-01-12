@@ -1,3 +1,5 @@
+.layui-table .layui-table-sort{padding: 0 !important;  margin: 0 !important; width: 20px !important;}
+.layui-table .layui-table-sort:hover i{border-bottom-color: #666 !important; border-top-color: #666 !important;}
 body,a,input{
 	font-family: "微软雅黑" !important;color: #333;}
 .fl{
@@ -27,14 +29,15 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	height: 28px;
 }
 .qd{
-	margin-left: 30px;
+	margin-left: 30px !important;
 }
 .body-title{
-	width: 1675px;
-	padding: 10px 25px 7px 25px;
+	width: 100%;
+	padding: 10px 22px 7px 22px;
 	overflow: hidden;
 	background-color: #fff;
 	box-shadow: 0px 0px 2px #ccc;
+	box-sizing: border-box;
 }
 .body-title .left{
 	font-weight: bold;
@@ -43,12 +46,12 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 /*顶部搜索*/
 .top-search{
 	width: 1675px;
-	padding: 0 25px;
-	margin-top: 50px;
+	padding: 0 22px;
+	margin-top: 30px;
 	position: relative;
 }
 .top-search .inp-list{
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 .top-search .inp-list li{
 	display: inline-block;
@@ -93,20 +96,20 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 /*分页*/
 #page{
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 30px;
 	width: 95%;
 }
 #page a, #page span,.page-spr{
-	margin-left: 20px !important;
+	margin-left: 10px !important;
     display: inline-block;
     vertical-align: middle;
-    padding: 0 15px;
-    height: 38px;
-    line-height: 38px;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
     margin: 0 -1px 5px 0;
     background-color: #fff;
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -120,7 +123,8 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 /*表格*/
 .table{
 	width: 1675px;
-	padding: 0 25px;
+	padding: 0 22px;
+	margin-top: 25px;
 }
 .layui-table td{
 	text-align: center;
@@ -129,7 +133,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	text-align: center;
 	font-weight: bold;
 }
-.layui-table thead th{
+.layui-table thead tr{
 	background-color: #eee;
 }
 .layui-table tbody tr:hover{
@@ -138,11 +142,23 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .layui-table td, .layui-table th{
 	border-color: #e5e5e5;
 	height: 45px;
-	padding: 0 16px;
+	padding: 0 3px;
 	color: #333;
 }
+.last-bz{
+	max-width: 244px;
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis
+}
+.kc{
+	max-width: 60px;
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis
+}
 .btn-see,.btn-talk,.btn-del,.btn-tk{
-	padding: 0 7px;
+	padding: 0 8px;
 	height: 28px;
 	line-height: 28px;
 }
@@ -271,6 +287,11 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	cursor: pointer;
 	color: #666;
 }
+.gt-click,.bz-click{
+	background-color: #1a8fe7;
+	border: 1px solid #1a8fe7 !important;
+	color: #fff !important;
+}
 .bz{overflow: hidden;}
 .bz ul{
 	width: 925px;
@@ -311,7 +332,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	color: #1a8fe7;
 	font-weight: bold;
 	text-decoration: underline;
-	margin: 20px 0 10px 0;
+	margin: 10px 0 ;
 	cursor: pointer;
 }
 .show-box{
@@ -340,7 +361,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 }
 .layer-talk .layui-layer-btn{
 	text-align: left;
-	padding-left: 135px;
+	padding: 25px 0 25px 135px !important;
 }
 .layer-talk .layui-layer-title{
 	font-weight: bold;
@@ -358,4 +379,64 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	width: 765px;
 	border: 1px solid #ededed;
 	border-radius: 5px;
+}
+/*小电脑样式*/
+@media screen and (max-width: 1366px){
+    .top-search{
+		margin-top: 20px;
+		font-size: 12px;
+	}
+	.top-search .inp-list{
+		margin-bottom: 10px;
+	}
+	#chance-time, #zp-time{
+		width: 170px;
+	}
+	.table{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.table .layui-table td,.table .layui-table th{
+		padding: 0 3px;
+		font-size: 12px;
+	}
+	.top-search,.table,.body-title{
+		width: 1400px;
+	}
+	.body-title{
+		box-sizing: content-box;
+	}
+	.top-search .updown{
+		right: 35px;
+	}
+	.top-search .updown img{
+		width: 15px;
+		height: 15px;
+	}
+	.top-search label{
+		margin: 0 18px 0 30px;
+		height: 30px;
+		line-height: 30px;
+	}
+	#page{
+		margin-top: 20px;
+	}
+	#page a, #page span, .page-spr{
+		padding: 0 10px;
+		height: 26px;
+    	line-height: 26px;
+    	font-size: 12px
+	}
+	.btn-search{
+		height: 30px;
+		line-height: 30px;
+		margin-right: 45px;
+	}
+	.gt-state{
+		margin-top: 20px;
+	}
+	.top-search li input{
+		height: 30px;
+		line-height: 30px;
+	}
 }

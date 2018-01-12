@@ -4,6 +4,7 @@ $(function(){
 	})
 	
 	// 表单展示隐藏
+	$(".updowncon").hide()
 	$(".updown").click(function(){
 		$(".updowncon").toggle();
 		$(".updown").html($(".updowncon").is(":hidden") ? '<img src="images/plus/bdup.png">' : '<img src="images/plus/bddown.png">');
@@ -18,6 +19,25 @@ $(function(){
 	$(".blue").click(function(){
 		$(this).next(".show-box").toggle();
 	})
+	$('.gt-state li').on('click',function(){
+		$(this).addClass('gt-click').siblings().removeClass('gt-click');
+	})
+//	备注内容
+	$('.bz li').click(function(){
+		$(this).toggleClass('bz-click');
+		var remark = '';
+        $('.bz-click').text(function(i, n) {
+            remark += n+'，' ;
+        });
+        remark=remark .substring(0,remark .length - 1);
+        $(".bz-text").val(remark);
+	})
+	$(".bz-text").change(function(){
+		if($(".bz-text").val().indexOf()){
+			$('.bz li').removeClass('bz-click')
+		}
+	})
+	
 })
 layui.use(['laydate','layer','form'], function(){
   	var laydate = layui.laydate,
@@ -85,7 +105,7 @@ layui.use(['laydate','layer','form'], function(){
 			title:'来5个',
 			btn: ['确定', '取消'],
 			skin: 'layer-talk', 
-			area: ['1175px','700px'], //宽高
+			area: ['1175px','620px'], //宽高
 			content: $('.talk'),
 		});
 	})
