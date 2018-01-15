@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/layui.css" media="all">
 		<link rel="stylesheet" href="css/my_chance.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/audio.css">
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	</head>
 
@@ -434,7 +435,7 @@
 					    <tr>
 					      <td>13792623098</td>
 					      <td>8</td>
-					      <td class="kc">经济就看两队交锋就师</td>
+					      <td class="kc" title="经济就看两队交锋就师">经济就看两就看了电视剧按揭房队交锋就师</td>
 					      <td>首页咨询</td>
 					      <td>2017-12-10  14:32:00</td>
 					      <td>2017-12-10  14:32:00</td>
@@ -639,9 +640,6 @@
 			<div class="gtjl">
 				<span class="blue">通话记录</span>
 				<div class="show-box">
-					<audio controls="controls" id="mp3" style="display: none;">
-					  	<source src="images/song.mp3" type="audio/mpeg">
-					</audio>
 					<table class="layui-table">
 						<thead>
 							<tr>
@@ -656,7 +654,24 @@
 								<td>坐席</td>
 								<td>沟通状态</td>
 								<td>30</td>
-								<td><a class="action">播放</a></td>
+								<td>
+									<a class="action">播放</a>
+									<audio controls="controls" class="mp3">
+									  	<source src="images/song.mp3" type="audio/mpeg">
+								  		<embed height="100" width="100" src="song.mp3" />
+									</audio>
+								</td>
+							</tr>
+							<tr>
+								<td>坐席</td>
+								<td>沟通状态</td>
+								<td>30</td>
+								<td>
+									<a class="action">播放</a>
+									<audio preload="auto" controls>
+										<source src="images/song.mp3" />
+									</audio>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -669,7 +684,10 @@
 				</div>
 			</div>
 		</div>
-		
+		<script src="js/audioplayer.js"></script>
+		<script>
+				$( 'audio' ).audioPlayer();
+		</script>
 		
 		<script type="text/javascript" src="layui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>

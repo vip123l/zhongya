@@ -49,7 +49,7 @@ $(function(){
 		$(this).toggleClass('bz-click');
 	    text_remark();
 	})
-	$(".bz-text").change(function(){
+	$(".bz-text").keyup(function(){
         remark=$(this).val();
         text_remark();
         $('.bz li').each(function () {
@@ -59,10 +59,17 @@ $(function(){
         })
 	})
 	
-	
-	$('.action').click(function(){
-		$('#mp3').toggle();
-	})
+//	音频显示隐藏
+	$('.audioplayer').hide()
+	$(".action").click(function() {
+        if($(this).next('.audioplayer').css("display")=="none"){
+        	$('.audioplayer').hide()
+             $(this).next('.audioplayer').show();
+        }else {
+             $(this).next('.audioplayer').hide();
+        }
+
+    })
 	
 })
 layui.use(['laydate','layer','form'], function(){
@@ -128,7 +135,7 @@ layui.use(['laydate','layer','form'], function(){
 	$('.btn-talk').on('click',function(){
 		layer.open({
 			type: 1,
-			title:'来5个',
+			title:'沟通',
 			btn: ['确定', '取消'],
 			skin: 'layer-talk', 
 			area: ['1175px','620px'], //宽高

@@ -25,11 +25,11 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	padding: 0;
 	line-height: 28px;
 	background-color: #12756c;
-	width: 70px;
+	width: 65px;
 	height: 28px;
 }
 .qd{
-	margin-left: 30px !important;
+	margin-left: 32px !important;
 }
 .body-title{
 	width: 100%;
@@ -86,7 +86,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .btn-search{
 	width: 110px;
 	height: 35px;
-	margin-right: 55px;
+	margin-right: 57px;
 	background-color: #1aa195;
 }
 .layui-form-select dl dd.layui-this{
@@ -152,7 +152,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	text-overflow: ellipsis
 }
 .kc{
-	max-width: 60px;
+	max-width:125px;
 	white-space: nowrap;
 	overflow: hidden; 
 	text-overflow: ellipsis
@@ -305,7 +305,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .bz-text{
 	padding: 15px;
 	width: 905px;
-	height: 110px;
+	height: 90px;
 	box-sizing:border-box;
 	border-radius: 5px;
 	border: 1px solid #e6e6e6;
@@ -339,6 +339,9 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	display: none;
 	width: 768px;
 	margin-left: 102px;
+}
+.show-box tr{
+	position: relative;
 }
 .show-box label{
 	width: auto;
@@ -381,6 +384,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	border: 1px solid #ededed;
 	border-radius: 5px;
 }
+
 /*小电脑样式*/
 @media screen and (max-width: 1366px){
     .top-search{
@@ -402,7 +406,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 		font-size: 12px;
 	}
 	.top-search,.table,.body-title{
-		width: 1400px;
+		width: 1426px;
 	}
 	.body-title{
 		box-sizing: content-box;
@@ -411,11 +415,11 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 		right: 35px;
 	}
 	.top-search .updown img{
-		width: 15px;
-		height: 15px;
+		width: 13px;
+		height: 13px;
 	}
 	.top-search label{
-		margin: 0 18px 0 30px;
+		margin: 0 18px 0 35px;
 		height: 30px;
 		line-height: 30px;
 	}
@@ -431,13 +435,16 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	.btn-search{
 		height: 30px;
 		line-height: 30px;
-		margin-right: 45px;
+		margin-right: 46px;
 	}
 	.gt-state{
 		margin-top: 20px;
 	}
 	.top-search li input{
 		height: 30px;
-		line-height: 30px;
+		line-height: 30px !important;
+	}
+	.qd{
+		margin-left: 20px !important;
 	}
 }
