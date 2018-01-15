@@ -37,6 +37,9 @@ $(function(){
 			$('.bz li').removeClass('bz-click')
 		}
 	})
+	$('.action').click(function(){
+		$('#mp3').toggle();
+	})
 	
 })
 layui.use(['laydate','layer','form'], function(){

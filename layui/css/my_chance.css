@@ -371,6 +371,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .action{
 	color: #1a8fe7;
 	font-weight: bold;
+	cursor: pointer;
 }
 .action:hover{
 	color: #1a8fe7;
