@@ -32,16 +32,35 @@
 		</ul>
 		<textarea name="" class="bz-text"></textarea>
 		<script type="text/javascript">
+			var remark='';
+			function text_remark() {
+			    /*去掉多余逗号*/
+			    if(remark.indexOf(',')==0){
+                    remark=remark.replace(',','');
+				}
+			    if(remark.indexOf(',,')>-1){
+                    remark=remark.replace(',,',',');
+				}
+				if(remark.substr(remark.length-1,remark.length)==','){
+                    remark=remark.substr(0,remark.length-1);
+                }
+                $(".bz-text").val(remark);
+            }
 			$('.bz li').click(function(){
+			    var this_text=$(this).text();
+			    if($(this).hasClass('bz-click')){
+					if(remark.indexOf(this_text)>-1){
+                        remark=remark.replace(this_text,'');
+					}
+				}else {
+                    remark+=','+this_text;
+				}
 				$(this).toggleClass('bz-click');
-				var remark = '';
-		        $('.bz-click').text(function(i, n) {
-		            remark += n+'，' ;
-		        });
-		        remark=remark .substring(0,remark .length - 1);
-		        $(".bz-text").val(remark);
+			    text_remark();
 			})
 			$(".bz-text").change(function(){
+                remark=$(this).val();
+                text_remark();
 			})
 		</script>
 	</body>
