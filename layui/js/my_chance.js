@@ -23,20 +23,43 @@ $(function(){
 		$(this).addClass('gt-click').siblings().removeClass('gt-click');
 	})
 //	备注内容
-	$('.bz li').click(function(){
-		$(this).toggleClass('bz-click');
-		var remark = '';
-        $('.bz-click').text(function(i, n) {
-            remark += n+'，' ;
-        });
-        remark=remark .substring(0,remark .length - 1);
+	var remark='';
+	function text_remark() {
+	    /*去掉多余逗号*/
+	    if(remark.indexOf(',')==0){
+            remark=remark.replace(',','');
+		}
+	    if(remark.indexOf(',,')>-1){
+            remark=remark.replace(',,',',');
+		}
+		if(remark.substr(remark.length-1,remark.length)==','){
+            remark=remark.substr(0,remark.length-1);
+        }
         $(".bz-text").val(remark);
+    }
+	$('.bz li').click(function(){
+	    var this_text=$(this).text();
+	    if($(this).hasClass('bz-click')){
+			if(remark.indexOf(this_text)>-1){
+                remark=remark.replace(this_text,'');
+			}
+		}else {
+            remark+=','+this_text;
+		}
+		$(this).toggleClass('bz-click');
+	    text_remark();
 	})
 	$(".bz-text").change(function(){
-		if($(".bz-text").val().indexOf()){
-			$('.bz li').removeClass('bz-click')
-		}
+        remark=$(this).val();
+        text_remark();
+        $('.bz li').each(function () {
+			if(remark.indexOf($(this).text())==-1){
+                $(this).removeClass('bz-click');
+			}
+        })
 	})
+	
+	
 	$('.action').click(function(){
 		$('#mp3').toggle();
 	})
