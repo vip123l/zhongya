@@ -106,14 +106,58 @@
 					<div class="layui-form-item">
 					    <label class="layui-form-label">推送时间：<span class="red">*</span></label>
 					    <div class="layui-input-block">
-					        <input type="radio" name="" value="立即推送" title="立即推送" checked>
-					        <input type="radio" name="" value="定时推送" title="定时推送">
-					        <input type="radio" name="" value="重复推送" title="重复推送">
+					        <input class="radio" type="radio" name="" value="立即推送" title="立即推送" checked>
+					        <input class="radio" type="radio" name="" value="定时推送" title="定时推送">
+					        <input class="radio" type="radio" name="" value="重复推送" title="重复推送">
 					    </div>
-					    <div class="layui-input-inline">
-					        <input type="text" class="layui-input" id="ts-time" placeholder="yy-MM-dd HH:mm:ss">
-					    </div>
-					    <div class="prompt red">截止此时间之前都可接收到消息</div>
+				    </div>
+				    <div class="layui-form-item time-tab">
+				    	<div class="layui-input-block">
+						    <div class="layui-input-inline">
+						        <input type="text" class="layui-input" id="ts-time" placeholder="yy-MM-dd HH:mm:ss">
+						    </div>
+						    <div class="prompt red">截止此时间之前都可接收到消息</div>
+						</div>
+						<div class="layui-input-block" style="display: none;">
+							<div class="layui-inline">
+						        <input type="text" class="layui-input showtime" id="ds-starttime" lay-verify="date" placeholder="请选择开始时间">
+						    </div> 
+						    <div class="layui-inline">至</div>
+						    <div class="layui-inline">   
+						        <input type="text" class="layui-input showtime" id="ds-endtime" lay-verify="date" placeholder="请选择结束时间">
+						    </div>
+						    <div class="prompt red">此时间段之内设备都可接收到消息</div>
+						</div>
+						<div class="layui-input-block" style="display: none;">
+							<div class="layui-inline">
+						        <input type="text" class="layui-input showtime" id="cf-starttime" lay-verify="date" placeholder="请选择开始时间">
+						    </div> 
+						    <div class="layui-inline">至</div>
+						    <div class="layui-inline">   
+						        <input type="text" class="layui-input showtime" id="cf-endtime" lay-verify="date" placeholder="请选择结束时间">
+						    </div>
+						    <div class="layui-inline cf-select">   
+						        <select>
+									<option value="0">每周</option>
+									<option value="1">每天</option>
+								</select>
+						    </div>
+						    <div class="layui-inline cf-select">   
+						        <select>
+									<option value="0">周一</option>
+									<option value="0">周二</option>
+									<option value="0">周三</option>
+									<option value="0">周四</option>
+									<option value="0">周五</option>
+									<option value="0">周六</option>
+									<option value="1">周日</option>
+								</select>
+						    </div>
+						    <div class="layui-inline cf-select">
+						        <input type="text" class="layui-input" id="cf-time">
+						    </div> 
+						    <div class="prompt red">每到此时间推送一遍消息</div>
+						</div>
 				    </div>
 				</div>
 				<input type="submit" value="提交" class="layui-btn"/>
@@ -129,6 +173,10 @@
 			layui.use('element', function(){
 			    var element = layui.element;
 			});
+//			底部推送时间切换
+		    $('.ts-bottom .radio').eq(2).click(function () {
+		        $('.time-tab .layui-input-block').eq(2).show().siblings().hide();
+		    })
 		})
 		layui.use(['form','laydate','layer'], function(){
 			var form = layui.form
@@ -143,8 +191,8 @@
 		  	});
 //		  	推送时间
 			laydate.render({
-			    elem: '#ts-time'
-			    ,type: 'datetime'
+			    elem: '#cf-time'
+			    ,type: 'time'
 			});
 		  	// 弹窗
 			$('.dellist').on('click', function(){

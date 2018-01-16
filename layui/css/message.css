@@ -14,7 +14,7 @@ body{font-family: "微软雅黑"}
 .meslist .layui-form .tslx input{width: 130px;}
 .meslist .layui-form .xxms{width: 280px;}
 .meslist .layui-form .layui-form-item .layui-inline{margin-bottom: 0;}
-.meslist .layui-form .layui-form-item .layui-inline input[lay-verify=date],#ts-time{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:200px;}
+.meslist .layui-form .layui-form-item .layui-inline input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:200px;}
 /*表格*/
 .meslist .layui-table,.mesapp .layui-table{margin-left: 30px; width: 90%;}
 .meslist .layui-table thead tr,.mesapp .layui-table thead tr{background: #1aa195;}
@@ -92,6 +92,10 @@ body{font-family: "微软雅黑"}
 	margin-top: 20px;
 	display: block;
 	font-weight: bold;
+}
+.ts-bottom input[lay-verify=date],#ts-time{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:200px;}
+.cf-select{
+	width: 110px;
 }
 @media screen and (max-width: 1366px){
 	.mesedit .layui-form{
