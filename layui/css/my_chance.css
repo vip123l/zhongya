@@ -80,7 +80,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .top-search .updown{
 	position: absolute;
     right: 45px;
-    top: 10px;
+    top: 7px;
     cursor: pointer;
 }
 .btn-search{
@@ -256,8 +256,24 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 .layui-laydate-list.laydate-time-list > li{width:50% !important;}
 .layui-laydate-list.laydate-time-list > li:last-child{display:none !important;}
 /*沟通*/
-.gt-state{
+.tel-label{
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0 17px 0 40px;
+	float: left;
+}
+.talk .layui-block{
 	margin-top: 30px;
+}
+.talk .layui-block input{
+	width: 110px;
+	padding-left: 8px;
+	border-radius: 5px;
+	cursor: not-allowed;
+}
+.talk .layui-block input:hover{border-color: #E6E6E6;}
+.gt-state{
+	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
@@ -442,7 +458,7 @@ input,.layer-form input{border-radius: 5px;color: #333;}
 	}
 	.top-search li input{
 		height: 30px;
-		line-height: 30px !important;
+		line-height: 1px;
 	}
 	.qd{
 		margin-left: 20px !important;

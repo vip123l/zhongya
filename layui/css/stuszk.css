@@ -1,0 +1,120 @@
+html,body{font-family: Arial,'微软雅黑',Helvetica,sans-serif; width: 100%; height: 100%; min-width: 1300px;}
+iframe {width: 100%; border: 0;}
+.layui-tab{margin: 0 !important; }
+
+/*通用框架样式 头部 左侧*/
+/*body背景颜色*/
+.layui-body{background: #ededed; bottom: 0 !important;}
+/*顶部logo以及切换图标样式*/
+.layui-layout-admin .layui-logo{text-align: left; padding-left: 20px; width: 175px;}
+.layui-layout-admin .layui-logo i{display:block; margin: 25px 0 20px; font-size: 20px; line-height:20px; cursor: pointer; float: right; color: #fff;}
+.layui-header .layui-nav{padding: 0;}
+/*顶部菜单样式*/
+.layui-layout-admin .layui-header{background: #1aa195;}
+.layui-layout-left .layui-nav-item a{font-size: 16px; color: #fff; width: 100px; padding: 0; text-align: center;}
+.layui-layout-left .layui-nav-item a:hover{background: #15877c;}
+.layui-layout-left .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after,.layui-layout-right .layui-this:after{height: 0px;}
+.layui-layout-right .layui-nav-item a{padding: 0 10px!important; color: #fff;}
+.layui-layout-right .layui-nav-item a i{margin-right: 5px; font-weight: bold;}
+.layui-layout-right .layui-nav-item a img{display: inline-block; margin-right: 5px; margin-bottom:3px;}
+.layui-layout-right .shezhi{padding: 0 15px;}
+.layui-layout-right .shezhi dl dd a{color: #333 !important;}
+.layui-layout-right .shezhi dd.layui-this a, .shezhi dd.layui-this{color: #fff !important; background: #1aa195 !important;}
+/*左侧菜单样式*/
+.layui-side{background: #fff; box-shadow: 1px 1px 7px #ccc;}
+.layui-side-scroll{background: #fff;}
+.layui-side-scroll .layui-nav-tree li a{background: #fff !important; color: #000 !important; font-weight: bold; border-bottom: 1px solid #eaeaea;}
+.layui-side-scroll .layui-nav-tree li a:hover{background: #0d645c !important;}
+.layui-side-scroll .layui-nav-tree li dl dd a{background: #fff !important; color: #333 !important; font-weight: normal;}
+.layui-side-scroll .layui-nav-tree li dl dd a:hover{color:#12756c !important; background: #fff !important; border-left:4px solid #0d645c;}
+.layui-side-scroll .layui-nav-tree .layui-nav-bar {width:0;}
+.layui-side-scroll .left-menu{display: none}
+.layui-side-scroll .left-menu:first-child{display: block}
+/*左侧菜单图标*/
+.layui-side-scroll .layui-nav .layui-nav-item .layui-nav-more{display: none;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater{font-size: 14px; color: #000;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater i{position: absolute; right: 10px; top:0; color: #1aa195;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater:hover{color: #fff !important;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater:hover i{color: #fff !important;}
+.layui-side-scroll .layui-nav .layui-nav-itemed .titlater{background: #12756c !important; color: #fff !important;}
+.layui-side-scroll .layui-nav .layui-nav-itemed .titlater i{color: #fff !important;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater .have{display: none;}
+.layui-side-scroll .layui-nav .layui-nav-item .titlater .nhave{display: block;}
+.layui-side-scroll .layui-nav-itemed .titlater .have{display: block !important;}
+.layui-side-scroll .layui-nav-itemed .titlater .nhave{display: none !important;}
+/*通用框架样式 头部 左侧 end*/
+
+/*学员总库样式*/
+.stuszk{background: #fff; color: #333; overflow:auto; padding-bottom: 30px;}
+.stuszk .layui-form{min-width:1700px; position: relative;}
+.stuszk .layui-form .updown{position: absolute; right:0; top:30px; cursor: pointer;}
+.stuszk .layui-form .updown i{display: none;}
+.stuszk .layui-form .layui-form-item{margin-left:45px; margin-bottom: 0;}
+.stuszk .layui-form .layui-form-item .layui-inline{margin-bottom: 0; margin-top: 30px;}
+.stuszk .layui-form .layui-form-item .layui-input-block{margin-left:92px;}
+.stuszk .layui-form .layui-form-item .layui-input-block input,.layui-input-block select{width: 168px; border-radius: 3px;}
+.stuszk .layui-form .layui-form-item .layui-form-label{color: #333; font-size: 14px; padding: 9px 0; width:86px; text-align: center;}
+.stuszk .layui-form .layui-form-item .layui-form-checkbox[lay-skin=primary] span{color: #333; float: left;}
+.layui-form .layui-form-item .layui-input-block input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat 140px center; height: 36px; width: 156px; line-height: 1.3; line-height: 36px\9; border-width: 1px; border-style: solid; background-color: #fff;border-radius: 2px; padding-left: 10px; border-color: #e6e6e6;}
+.stuszk .layui-form .layui-form-item .bluecor{color: #1e9fff; font-size: 20px; font-weight: bold; margin-right: 30px;}
+.stuszk .layui-form .layui-form-item .layui-inline button{font-size: 16px; border-radius: 5px;}
+.stuszk .layui-form .layui-form-item .bggreen button{background: #33ab9f; margin-left: 30px;}
+.stuszk .layui-form .layui-form-item .bgblue{padding: 0 40px 0 20px;}
+.stuszk .layui-form .layui-form-item .bgblue button{background: #71baff; margin-left: 30px;}
+.stuszk .layui-form .layui-form-item .bgorange button{background: #ff5722;}
+/*表格*/
+.stuszk .layui-table{min-width:1920px; margin:30px 0;}
+.stuszk .layui-table thead tr:hover{background:#f6f6f6 !important;}
+.stuszk .layui-table tr:nth-of-type(odd):hover{background:none;}
+.stuszk .layui-table tr:nth-of-type(even){background:#f6f6f6;}
+.stuszk .layui-table tr th{text-align: center; vertical-align: middle; height: 57px; font-size: 16px; color: #666; border: 0; padding:0; font-weight: bold;}
+.stuszk .layui-table tr td{text-align: center; vertical-align: middle; height: 57px; font-size: 14px; color: #333; border: 0; padding:0 18px;}
+.stuszk .layui-table tr td.edits a{display: inline-block; font-size: 14px; color: #33ab9f; margin-right: 20px;}
+.stuszk .layui-table tr td.edits a:hover{text-decoration: underline;}
+/*底部*/
+.stuszk .bottoms{width: 100%; text-align: center;}
+/*分页*/
+.stuszk .bottoms #page{display: inline-block;}
+.stuszk .bottoms .layui-laypage a, .bottoms .layui-laypage span{height: 38px; line-height: 38px; font-size: 16px;}
+.stuszk .bottoms .layui-laypage{margin: 0;}
+/*设置选项坐席*/
+.stuszk .bottoms button{float: left; margin-left: 30px; background: #33ab9f;}
+
+/*1,新增报名弹窗*/
+.addbm{display: none;}
+#addbms{background: #f9f9f9; min-height: 500px;}
+#addbms .layui-table {background: none;}
+#addbms .layui-table tr th{color: #666; font-size: 14px; font-weight: bold; height: 30px; vertical-align: middle; border: 0; text-align: center;}
+#addbms .layui-table tr td{padding:0 12px; height: 30px; vertical-align: middle; border: 0; text-align: center;}
+#addbms .stualert{font-size: 16px; color: #ff5722; font-weight: bold; float: right; margin-right: 30px; padding-top: 20px;}
+.layui-layer-setwin .layui-layer-close2{right: 0 !important; top: 0 !important;}
+
+/*2,继续报名弹窗*/
+.goonaddstu{display: none;}
+#goonaddstus{background: #f9f9f9;}
+.addstuTit{padding: 11px 0; height: 36px; line-height: 36px; background: #1e9fff;}
+.addstuTit span{color: #fff; font-size: 16px; font-weight: bold; margin-left: 20px; display: inline-block;}
+.addstuTit .sfzdq{float: right; margin-right: 35px; height: 36px; line-height: 36px;}
+#goonaddstus .layui-form .layui-form-item{margin-left:45px; margin-bottom: 0;}
+#goonaddstus .layui-form .layui-form-item .layui-inline{margin-bottom: 0; margin-top: 30px;}
+#goonaddstus .layui-form .layui-form-item .layui-input-block{margin-left:92px;}
+#goonaddstus .layui-form .layui-form-item .layui-input-block input,.layui-input-block select{width: 168px; border-radius: 3px;}
+#goonaddstus .layui-form .layui-form-item .layui-form-label{color: #333; font-size: 14px; padding: 9px 0; width:86px; text-align: center;}
+#goonaddstus .layui-form .layui-form-item .layui-form-checkbox[lay-skin=primary] span{color: #333; float: left;}
+#goonaddstus .layui-form .layui-form-item .layui-input-block input[lay-verify=date]{width: 156px;}
+#goonaddstus .layui-form .layui-form-item .layui-input-block input.w440{width: 443px;}
+#goonaddstus .layui-form .layui-form-item .layui-input-block .layui-textarea{width: 990px;}
+.layui-layer-page .layui-layer-btn{background: #f9f9f9; }
+.layui-layer-page .layui-layer-btn a{width: 130px; height: 36px; line-height: 36px; font-size: 16px; background: #1e9fff; color: #fff; border-radius: 20px; margin-right: 30px;}
+/*2-1,感应身份弹窗*/
+.stuszk .gysf{display: none;}
+#gysfcon{width: 970px; height: 470px; background:url(../images/plus/gysfbg.jpg)no-repeat center 60px #f6f5f5;}
+#gysfcon .fdjcon,#gysfcon .fdj{animation:2s linear infinite}
+#gysfcon .fdjcon{position:absolute;top:53%;left:41%;transform:translate(-50%,-50%) rotate(0);transform-origin:15% 30%;animation-name:out;}
+#gysfcon .fdj{transform:rotate(0);animation-name:in; width: 60%;}
+#gysfcon p{text-align: center; color: #333; font-size: 20px; margin-top: 404px;}
+@keyframes out{0%{transform:rotate(0)}100%{transform:rotate(-360deg)}}
+@keyframes in{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+/*2-2,报名成功*/
+.stuszk .bccg{display: none;}
+#bccgcon{height:150px; line-height:150px; text-align: center; color: #333; font-size: 24px; background: #fff;}
