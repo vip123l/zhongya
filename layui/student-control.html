@@ -357,12 +357,12 @@
 				form.render('checkbox');  
 			});
 			form.on('checkbox(check-item)', function(data){
-				console.log(data.elem.checked)
-				console.log($('.layui-table input[type="checkbox"]').length)
-				if(data.elem.checked===data.elem){
-					
-				}
-				form.render('checkbox');  
+				if($('.layui-table input[type="checkbox"]').length != $('.layui-table input[type="checkbox"]:checked').length){
+                    $('#checkAll').prop('checked',false);
+				}else {
+                    $('#checkAll').prop('checked',true);
+                }
+				form.render('checkbox');
 			});
 				
 		  	// 弹窗
