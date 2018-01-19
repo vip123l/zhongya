@@ -6,7 +6,7 @@ body{font-family: "微软雅黑"}
 .layui-input{border-radius: 5px;line-height: 35px;height: 35px;}
 .layui-btn{border-radius: 5px;}
 /*学员信息添加页面样式*/
-.add-stu .title,.stu-list .title{
+.add-stu .title,.stu-list .title,.my-stu .title{
 	width: 100%;
 	box-sizing: border-box;
 	height: 45px; 
@@ -14,7 +14,7 @@ body{font-family: "微软雅黑"}
 	background: #fff;
 	box-shadow: 0px 0px 5px #ccc;
 }
-.add-stu .title>span,.stu-list .title>span{
+.title-pri{
 	display: inline-block;
 	border-bottom: 2px solid #12756c;
 	font-size: 14px;
@@ -46,19 +46,20 @@ body{font-family: "微软雅黑"}
 }
 /*学员信息*/
 /*学员信息表单*/
-.stu-list{overflow: auto;}
-.stu-list .title{width:1720px;}
-.stu-list .top-search{margin: 30px 25px 20px 25px;width: 1675px;}
-.stu-list .layui-form .layui-form-label{padding: 7px 0; font-size: 14px;min-width: 70px;width: auto;}
-.stu-list .layui-form .layui-input-block{margin-left: 78px;}
-.stu-list .layui-form .layui-form-item .layui-inline{margin-bottom: 0;}
-.stu-list .layui-form .layui-form-item .layui-inline input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:150px;}
-.stu-list .wid1{width: 110px;}
-.stu-list .wid2{width: 150px;}
+.stu-list,.my-stu{overflow: auto;}
+.stu-list .title,.my-stu .title{width:1720px;}
+.stu-list .top-search,.my-stu .top-search{margin: 30px 25px 20px 25px;width: 1675px;}
+.stu-list .top-search .layui-form-item,.my-stu .top-search .layui-form-item{margin-bottom: 30px;}
+.stu-list .layui-form .layui-form-label,.my-stu .layui-form .layui-form-label{padding: 7px 0; font-size: 14px;min-width: 70px;width: auto;}
+.stu-list .layui-form .layui-input-block,.my-stu .layui-form .layui-input-block{margin-left: 78px;}
+.stu-list .layui-form .layui-form-item .layui-inline,.my-stu .layui-form .layui-form-item .layui-inline{margin-bottom: 0;}
+.stu-list .layui-form .layui-form-item .layui-inline input[lay-verify=date],.my-stu .layui-form .layui-form-item .layui-inline input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:150px;}
+.stu-list .wid1,.my-stu .wid1{width: 110px;}
+.stu-list .wid2,.my-stu .wid2{width: 150px;}
 .btn-search{line-height: 35px;height: 35px;width: 75px;}
 /*学员信息表格*/
-.stu-list .list-num{width: 1675px;margin: 0px 25px 20px 25px;overflow: hidden;}
-.stu-list .list-num a,.stu-list .fp{
+.stu-list .list-num,.my-stu .list-num{width: 1675px;margin: 0px 25px 20px 25px;overflow: hidden;}
+.stu-list .list-num a,.stu-list .fp,.my-stu .list-num a,.my-stu .fp{
 	width: 140px;
 	height: 35px;
 	line-height: 35px;
@@ -72,20 +73,45 @@ body{font-family: "微软雅黑"}
 	box-sizing: border-box;
 	vertical-align: middle;
 }
-.stu-list .list-num .fl{vertical-align: bottom;line-height: 35px;height: 35px;}
-.stu-list .red{color: red;}
-.stu-list .layui-table{margin:20px 25px 30px 25px;width: 1675px;color: #333;}
-.stu-list .layui-table thead tr{background: #1a8fe7;}
-.stu-list .layui-table tr th{text-align: center; vertical-align: middle; height: 45px; font-size: 14px; color: #fff;  padding:0; font-weight: bold;border-color:#1a8fe7 ;}
-.stu-list .layui-table tr td{text-align: center; vertical-align: middle; height: 43px; font-size: 14px; padding:0 3px;}
-.stu-list .layui-table tr td button{height: 28px; line-height: 28px; border-radius: 5px;padding: 0 14px;}
-.stu-list .layui-table thead tr:hover{background: #1a8fe7 !important;}
-.stu-list .layui-table tr:hover{background:#fff !important;}
-.stu-list .layui-btn{font-weight: bold;}
-.stu-list .layui-form-checkbox[lay-skin=primary] i{width: 12px;height: 12px;line-height: 12px;}
+.stu-list .list-num .fl,.my-stu .list-num .fl{vertical-align: bottom;line-height: 35px;height: 35px;}
+.stu-list .red,.my-stu .red{color: red;}
+.stu-list .layui-table,.my-stu .layui-table{margin:20px 25px 30px 25px;width: 1675px;color: #333;}
+.stu-list .layui-table thead tr,.my-stu .layui-table thead tr{background: #1a8fe7;}
+.stu-list .layui-table tr th,.my-stu .layui-table tr th{text-align: center; vertical-align: middle; height: 45px; font-size: 14px; color: #fff;  padding:0; font-weight: bold;border-color:#1a8fe7 ;}
+.stu-list .layui-table tr td,.my-stu .layui-table tr td{text-align: center; vertical-align: middle; height: 43px; font-size: 14px; padding:0 3px;}
+.stu-list .layui-table tr td button,.my-stu .layui-table tr td button{height: 28px; line-height: 28px; border-radius: 5px;padding: 0 14px;}
+.stu-list .layui-table thead tr:hover,.my-stu .layui-table thead tr:hover{background: #1a8fe7 !important;}
+.stu-list .layui-table tr:hover,.my-stu .layui-table tr:hover{background:#fff !important;}
+.stu-list .layui-btn,.my-stu .layui-btn{font-weight: bold;}
+ .layui-form-checkbox[lay-skin=primary] i,.my-stu .layui-form-checkbox[lay-skin=primary] i{width: 12px;height: 12px;line-height: 12px;}
 .layui-form-checkbox[lay-skin=primary] span{color: #333;}
 .bottom-search{margin-left: 35px;}
 .bottom-search .layui-inline+.layui-inline{margin-left: 20px;}
+/*我的学员*/
+.my-stu #tab2{display: none;}
+.my-stu .title span{
+	display: inline-block;
+	margin-left: 30px;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+}
+.my-stu .title-pri{
+	display: inline-block;
+	border-bottom: 2px solid #12756c;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 30px;
+	color: #12756c !important;
+}
+.my-stu .list-num .fl:first-child{margin-right: 30px;}
+/*学员报名信息*/
+.bm-stu .layui-form .layui-form-item  input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:170px;}
+/*删除弹窗*/
+ .del .layui-layer-title{background: #1a8fe7 !important; color: #fff !important;}
+.del .layui-layer-btn0,.layui-layer-btn1{border-radius:5px !important;}
+.del .layui-layer-btn1{margin-left: 20px;}
+.deltx{height:130px; line-height:145px; width: 360px; background: #fff; display: none; font-size: 16px; text-align: center;}
 /*分页*/
 #page{
 	text-align: center;
