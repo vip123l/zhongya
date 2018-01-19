@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>学员信息添加</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/layui.css" media="all">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/changsha.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body class="layui-layout-body">
+	<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+	<!--[if lt IE 9]>
+	  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+	  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->   
+
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header" id="header">
+			<!-- logo -->
+			<div class="layui-logo">
+				<img src="images/plus/logo.png">
+				<i class="layui-icon cdclose">&#xe65f;</i>
+			</div>
+			<!-- 头部区域（可配合layui已有的水平导航） -->
+			<div id="Menu">
+				<ul class="layui-nav top-menu layui-layout-left" lay-filter="top-menu">
+					<li class="layui-nav-item layui-this"><a href="javascript:;">长沙考研</a></li>
+				</ul>
+			</div>
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item"><a href="javascript:;"><i class="layui-icon">&#xe68e;</i>首页</a></li>
+				<li class="layui-nav-item shezhi"><a href="javascript:;"><i class="layui-icon">&#xe612;</i>杨伊_8001</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:;">密码修改</a></dd>
+						<dd><a href="javascript:;">安全退出</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<!-- 左侧菜单栏 -->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll"> 
+
+                <!-- 网站设置 -->
+				<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+					<li class="layui-nav-item layui-this">
+						<a href="javascript:;" class="titlater">长沙业务管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+						<dl class="layui-nav-child">
+							<dd><a href="javascript:;">学员信息添加</a></dd>
+							<dd><a href="javascript:;">学员管理</a></dd>
+							<dd><a href="javascript:;">我的学员</a></dd>
+							<dd><a href="javascript:;">未成单学员</a></dd>
+							<dd><a href="javascript:;">学管师学员信息</a></dd>
+							<dd><a href="javascript:;">学员总库</a></dd>
+							<dd><a href="javascript:;">市场代理信息</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 内容主体区域 -->
+		<div class="layui-body add-stu">
+			<div class="title">
+				<span>学员信息添加</span>
+			</div>
+			<form action="" class="layui-form">
+				<div class="layui-form-item">
+		          	<label class="layui-form-label">所属校区：</label>
+		          	<div class="layui-input-inline wid1">
+		          		<select lay-verify="required">
+		          			<option value="1">河东校区</option>
+		          			<option value="2">河东校区</option>
+		          			<option value="3">河东校区</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+				    <label class="layui-form-label">学员姓名：</label>
+				    <div class="layui-input-inline wid1">
+				      <input type="text" name="" lay-verify="required" required class="layui-input">
+				    </div>
+				    <span class="red">*必填</span>
+			    </div>
+			    <div class="layui-form-item">
+		          	<label class="layui-form-label">性别：</label>
+		          	<div class="layui-input-inline wid4">
+		          		<select>
+		          			<option value="1">男</option>
+		          			<option value="2">女</option>
+		          		</select>
+		          	</div>
+		        </div>
+		        <div class="layui-form-item">
+				    <label class="layui-form-label">学员电话：</label>
+				    <div class="layui-input-inline wid1">
+				      <input type="text" name="" lay-verify="required" required  class="layui-input">
+				    </div>
+				    <span class="red">*必填</span>
+			    </div>
+			    <div class="layui-form-item">
+				    <label class="layui-form-label">学员QQ号：</label>
+				    <div class="layui-input-inline wid1">
+				      <input type="text" name=""  class="layui-input">
+				    </div>
+			    </div>
+			    <div class="layui-form-item">
+				    <label class="layui-form-label">学员微信号：</label>
+				    <div class="layui-input-inline wid1">
+				      <input type="text" name=""  class="layui-input">
+				    </div>
+			    </div>
+			    <div class="layui-form-item">
+		          	<label class="layui-form-label">来源：</label>
+		          	<div class="layui-input-inline wid1">
+		          		<select lay-verify="required">
+		          			<option value="">全部</option>
+		          			<option value="0">学员转化</option>
+		          			<option value="1">推荐</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+		          	<label class="layui-form-label">生源地：</label>
+		          	<div class="layui-input-inline wid2">
+		          		<select lay-verify="required">
+		          			<option value="1">河东校区</option>
+		          			<option value="2">河东校区</option>
+		          			<option value="3">河东校区</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+				    <label class="layui-form-label">本科院校：</label>
+				    <div class="layui-input-inline wid2">
+				      <input type="text" name=""  class="layui-input">
+				    </div>
+			    </div>
+			    <div class="layui-form-item">
+				    <label class="layui-form-label">本科专业：</label>
+				    <div class="layui-input-inline wid2">
+				      <input type="text" name=""  class="layui-input">
+				    </div>
+			    </div>
+			    <div class="layui-form-item">
+		          	<label class="layui-form-label">学员年级：</label>
+		          	<div class="layui-input-inline wid2">
+		          		<select lay-verify="required">
+		          			<option value="1">大一</option>
+		          			<option value="2">大二</option>
+		          			<option value="3">大三</option>
+		          			<option value="4">大四</option>
+		          			<option value="5">社会在职</option>
+		          			<option value="6">研究生</option>
+		          			<option value="7">其他</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+		          	<label class="layui-form-label">年份：</label>
+		          	<div class="layui-input-inline wid2">
+		          		<select lay-verify="required">
+		          			<option value="1">2014</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+		          	<label class="layui-form-label">意向类型：</label>
+		          	<div class="layui-input-inline wid2">
+		          		<select lay-verify="required">
+		          			<option value="1">A类</option>
+		          			<option value="2">B类</option>
+		          			<option value="3">C类</option>
+		          			<option value="4">其他</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item">
+		          	<label class="layui-form-label">考试阶段：</label>
+		          	<div class="layui-input-inline wid2">
+		          		<select lay-verify="required">
+		          			<option value="1">初试</option>
+		          			<option value="2">复试</option>
+		          			<option value="3">其他</option>
+		          		</select>
+		          	</div>
+		          	<span class="red">*必填</span>
+		        </div>
+		        <div class="layui-form-item layui-form-text">
+				    <label class="layui-form-label">备注：</label>
+				    <div class="layui-input-inline wid3">
+				        <textarea class="layui-textarea"></textarea>
+				    </div>
+				</div>
+				<input type="submit" value="提 交" class="layui-btn"/>
+			</form>
+		</div>
+
+	</div>
+	   
+	<script type="text/javascript" src="layui.js" charset="utf-8"></script> 
+	<script type="text/javascript">
+		$(function(){
+//			左侧导航
+			layui.use('element', function(){
+			    var element = layui.element;
+			});
+		})
+		
+	</script>
+</body>
+</html>
+
+

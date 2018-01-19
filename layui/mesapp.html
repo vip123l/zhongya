@@ -293,11 +293,11 @@
 				<label class="layui-form-label">所属APP：</label>
 				<div class="layui-input-block">
 					<select>
-						<option value="0">全部</option>
-						<option value="1">教育学安卓</option>
-						<option value="2">中业网校ios</option>
-						<option value="3">中业考研安卓</option>
-						<option value="4">中业教育安卓</option>
+						<option value="全部">全部</option>
+						<option value="教育学安卓">教育学安卓</option>
+						<option value="中业网校ios">中业网校ios</option>
+						<option value="中业考研安卓">中业考研安卓</option>
+						<option value="中业教育安卓">中业教育安卓</option>
 					</select>
 				</div>
 			</div>
@@ -345,6 +345,10 @@
 				$(this).addClass('top-click').siblings().removeClass('top-click');
 				$('#tab1').hide();
 				$('#tab2').show();
+			})
+//			禁用和启用切换
+			$('.using').click(function(){
+				$(this).text()=='启用'?$(this).text('禁用'):$(this).text('启用')
 			})
 		})
 		

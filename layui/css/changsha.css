@@ -1,0 +1,115 @@
+/*公共样式*/
+body{font-family: "微软雅黑"}
+.fl{float: left;}
+.fr{float: right;}
+.layui-body{background-color: #fff;}
+.layui-input{border-radius: 5px;line-height: 35px;height: 35px;}
+.layui-btn{border-radius: 5px;}
+/*学员信息添加页面样式*/
+.add-stu .title,.stu-list .title{
+	width: 100%;
+	box-sizing: border-box;
+	height: 45px; 
+	line-height: 45px; 
+	background: #fff;
+	box-shadow: 0px 0px 5px #ccc;
+}
+.add-stu .title>span,.stu-list .title>span{
+	display: inline-block;
+	border-bottom: 2px solid #12756c;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 30px;
+	color: #12756c;
+}
+.add-stu .layui-form{
+	display: block;
+	padding: 30px 20px;
+	font-size: 14px;
+	color: #333;
+}
+.add-stu .layui-form-item{margin-bottom: 30px;}
+.add-stu .layui-form-text{margin-bottom: 20px;}
+.add-stu .red{color: red;display: inline-block;line-height: 38px;}
+.add-stu .layui-form-label{width: 85px;}
+.add-stu .wid1{width: 130px;}
+.add-stu .wid2{width: 200px;}
+.add-stu .wid3{width: 770px;}
+.add-stu .wid4{width: 100px;}
+.add-stu textarea{border-radius: 5px;}
+.add-stu .layui-btn{
+	display: block;
+	width: 100px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 460px;
+}
+/*学员信息*/
+/*学员信息表单*/
+.stu-list{overflow: auto;}
+.stu-list .title{width:1720px;}
+.stu-list .top-search{margin: 30px 25px 20px 25px;width: 1675px;}
+.stu-list .layui-form .layui-form-label{padding: 7px 0; font-size: 14px;min-width: 70px;width: auto;}
+.stu-list .layui-form .layui-input-block{margin-left: 78px;}
+.stu-list .layui-form .layui-form-item .layui-inline{margin-bottom: 0;}
+.stu-list .layui-form .layui-form-item .layui-inline input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:150px;}
+.stu-list .wid1{width: 110px;}
+.stu-list .wid2{width: 150px;}
+.btn-search{line-height: 35px;height: 35px;width: 75px;}
+/*学员信息表格*/
+.stu-list .list-num{width: 1675px;margin: 0px 25px 20px 25px;overflow: hidden;}
+.stu-list .list-num a,.stu-list .fp{
+	width: 140px;
+	height: 35px;
+	line-height: 35px;
+	display: block;
+	color: #1aa195;
+	border: 1px solid #1aa195;
+	background-color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+.stu-list .list-num .fl{vertical-align: bottom;line-height: 35px;height: 35px;}
+.stu-list .red{color: red;}
+.stu-list .layui-table{margin:20px 25px 30px 25px;width: 1675px;color: #333;}
+.stu-list .layui-table thead tr{background: #1a8fe7;}
+.stu-list .layui-table tr th{text-align: center; vertical-align: middle; height: 45px; font-size: 14px; color: #fff;  padding:0; font-weight: bold;border-color:#1a8fe7 ;}
+.stu-list .layui-table tr td{text-align: center; vertical-align: middle; height: 43px; font-size: 14px; padding:0 3px;}
+.stu-list .layui-table tr td button{height: 28px; line-height: 28px; border-radius: 5px;padding: 0 14px;}
+.stu-list .layui-table thead tr:hover{background: #1a8fe7 !important;}
+.stu-list .layui-table tr:hover{background:#fff !important;}
+.stu-list .layui-btn{font-weight: bold;}
+.stu-list .layui-form-checkbox[lay-skin=primary] i{width: 12px;height: 12px;line-height: 12px;}
+.layui-form-checkbox[lay-skin=primary] span{color: #333;}
+.bottom-search{margin-left: 35px;}
+.bottom-search .layui-inline+.layui-inline{margin-left: 20px;}
+/*分页*/
+#page{
+	text-align: center;
+	margin-top: 30px;
+	width: 95%;
+}
+#page a, #page span,.page-spr{
+	margin-left: 10px !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.page-spr{
+	border: none;
+}
+#page .page-click{
+	background-color: #1aa195;
+	color: #fff;
+}

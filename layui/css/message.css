@@ -1,5 +1,6 @@
 body{font-family: "微软雅黑"}
 .layui-btn{border-radius: 5px;font-weight: bold;}
+.layui-anim{max-height: 200px !important;}
 /***消息列表页面样式***/
 .meslist{background: #ededed; color: #333;}
 /*消息列表标题*/
@@ -7,7 +8,7 @@ body{font-family: "微软雅黑"}
 .meslistit p{width: 118px; border-right: 1px solid #e6e6e6; background: #ededed; font-size: 14px; color: #12756c; font-weight: bold; text-align: center;}
 .meslistit a{width: 113px; height: 26px; line-height: 26px; font-size: 14px; color: #1a8fe7; border: 1px solid #1a8fe7; border-radius: 3px; text-align: center; float: right; margin: 9px 52px 0 0;}
 /*消息列表表单*/
-.meslist .layui-form,.mesapp .layui-form{margin-left: 30px; height: 38px; padding: 50px 0;}
+.meslist .layui-form,.mesapp .layui-form{margin-left: 30px; height: 38px; padding: 30px 0;}
 .meslist .layui-form .layui-form-label,.mesapp .layui-form .layui-form-label{padding: 9px 0; font-size: 14px; width: 74px;}
 .meslist .layui-form .layui-input-block{margin-left: 78px;}
 .meslist .layui-form .ssapp input,.mesapp .layui-form .ssapp input{width: 200px;}
@@ -37,10 +38,10 @@ body{font-family: "微软雅黑"}
 /***消息编辑页面***/
 .mesedit{background: #ededed; color: #333;}
 /*消息编辑标题*/
-.mesedittit{height: 45px; line-height: 45px; background: #fff; margin-bottom: 50px;}
+.mesedittit{height: 45px; line-height: 45px; background: #fff; margin-bottom: 30px;}
 .mesedittit p{width: 118px; border-right: 1px solid #e6e6e6; background: #ededed; font-size: 14px; color: #12756c; font-weight: bold; text-align: center;}
 /*消息编辑表单*/
-.mesedit .layui-form{width: 70%; padding: 0 5%; margin: 0 auto;}
+.mesedit .layui-form{width: 75%; padding: 0 5%; margin: 0 auto;}
 .mesedit .layui-form .layui-block span{line-height: 38px; color: #ef0000; font-size: 14px;}
 .mesedit .layui-form .layui-block .layui-form-select{width: 200px; margin-bottom: 30px;}
 .mesedit .layui-form .marbom20{margin-bottom: 20px;}
@@ -49,6 +50,7 @@ body{font-family: "微软雅黑"}
 .content-top{ background: #fff;overflow: hidden; padding: 30px 0 40px 0;}
 #wordCount{
 	position: relative;
+	width: 60%;
 }
 .words{
 	position: absolute;
@@ -57,6 +59,7 @@ body{font-family: "微软雅黑"}
 	color: #333 !important;
 }
 .phone{
+	width: 30%;
 	float: right;
 	margin-top: -200px;
 	margin-right: 65px;
@@ -68,12 +71,15 @@ body{font-family: "微软雅黑"}
 	margin-top: 110px;
 }
 .phone img{
-	width: 335px;
+	width: 100%;
 }
 .ts-bottom{
 	background: #fff;
 	padding: 25px 0;
 }
+.mesedit .layui-form-item{padding-left: 40px;}
+.ts-bottom .layui-form-item:first-child{margin-left: 5px;}
+.ts-bottom .layui-input-block{margin-left: 25px;}
 .layui-form-radioed i{
 	color: #1aa195 !important;
 }
@@ -97,6 +103,7 @@ body{font-family: "微软雅黑"}
 .cf-select{
 	width: 110px;
 }
+.android{display: none;}
 @media screen and (max-width: 1366px){
 	.mesedit .layui-form{
 		width: 95%;

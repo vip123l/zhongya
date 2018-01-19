@@ -73,21 +73,28 @@
 					<div class="layui-block">
 						<label class="layui-form-label">所属APP：</label>
 						<div class="layui-input-block">
-							<select>
-								<option value="0">全部</option>
-								<option value="1">教育学安卓</option>
-								<option value="2">中业网校ios</option>
-								<option value="3">中业考研安卓</option>
-								<option value="4">中业教育安卓</option>
+							<select lay-filter="phone">
+								<option value="">请选择</option>
+								<option value="教育学安卓">教育学安卓</option>
+								<option value="中业网校ios">中业网校ios</option>
+								<option value="中业考研安卓">中业考研安卓</option>
+								<option value="中业教育安卓">中业教育安卓</option>
 							</select>
 						</div>
 					</div>
-					<div class="layui-block marbom20">
+					<div class="layui-block marbom20 ios">
 						<label class="layui-form-label">消息描述：</label>
 						<div class="layui-input-inline xxms">
-							<input type="text" class="layui-input"  placeholder="" autocomplete="off" >
+							<input type="text" class="layui-input">
 						</div>
 						<span class="layui-block">*（此内容不显示在消息中）</span>
+					</div>
+					<div class="layui-block marbom20 android">
+						<label class="layui-form-label">标题：</label>
+						<div class="layui-input-inline xxms">
+							<input type="text" class="layui-input">
+						</div>
+						<span class="layui-block">*（此内容显示在消息中）</span>
 					</div>
 					<div class="layui-block" id="wordCount">
 						<label class="layui-form-label">内容：</label>
@@ -99,16 +106,17 @@
 					</div>
 					<div class="phone">
 						<span>实际效果图示：</span>
-						<img src="images/plus/phone.jpg"/>
+						<img src="images/plus/ios.jpg" class="ios"/>
+						<img src="images/plus/android.jpg" class="android"/>
 					</div>
 				</div>
 				<div class="ts-bottom">
 					<div class="layui-form-item">
 					    <label class="layui-form-label">推送时间：<span class="red">*</span></label>
 					    <div class="layui-input-block">
-					        <input class="radio" type="radio" name="" value="立即推送" title="立即推送" checked>
-					        <input class="radio" type="radio" name="" value="定时推送" title="定时推送">
-					        <input class="radio" type="radio" name="" value="重复推送" title="重复推送">
+					        <input type="radio" name="" lay-filter="filter" value="立即推送" title="立即推送" checked>
+					        <input type="radio" name="" lay-filter="filter" value="定时推送" title="定时推送">
+					        <input type="radio" name="" lay-filter="filter" value="重复推送" title="重复推送">
 					    </div>
 				    </div>
 				    <div class="layui-form-item time-tab">
@@ -173,10 +181,6 @@
 			layui.use('element', function(){
 			    var element = layui.element;
 			});
-//			底部推送时间切换
-		    $('.ts-bottom .radio').eq(2).click(function () {
-		        $('.time-tab .layui-input-block').eq(2).show().siblings().hide();
-		    })
 		})
 		layui.use(['form','laydate','layer'], function(){
 			var form = layui.form
@@ -189,6 +193,28 @@
 		  		   ,type: 'datetime'
 		  		});
 		  	});
+//		  	判断安卓还是iOS
+			form.on('select(phone)', function(data){
+				if(data.value.indexOf('安卓')>-1){
+					$('.ios').hide();
+					$('.android').show();
+				}else{
+					$('.ios').show();
+					$('.android').hide();
+				}
+			}); 
+//			底部推送时间切换
+			form.on('radio(filter)', function(data){
+				//被点击的radio的value值
+				if(data.value=='立即推送'){
+				  	$('.time-tab .layui-input-block:eq(0)').show().siblings().hide();
+				}else if(data.value=='定时推送'){
+				  	$('.time-tab .layui-input-block:eq(1)').show().siblings().hide();
+				}else{
+				  	$('.time-tab .layui-input-block:eq(2)').show().siblings().hide();
+				};
+			}); 
+
 //		  	推送时间
 			laydate.render({
 			    elem: '#cf-time'

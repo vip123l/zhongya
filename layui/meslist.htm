@@ -170,6 +170,10 @@
 			layui.use('element', function(){
 			    var element = layui.element;
 			});
+//			禁用和启用切换
+			$('.using').click(function(){
+				$(this).text()=='启用'?$(this).text('禁用'):$(this).text('启用')
+			})
 		})
 		layui.use(['form','laydate','layer'], function(){
 			var form = layui.form
