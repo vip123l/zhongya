@@ -199,6 +199,7 @@
                             <option value="2">女</option>
                         </select>
                     </div>
+                    <span class="red">*必填</span>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">学员电话：</label>
@@ -320,7 +321,7 @@
         layui.use('element', function () {
             var element = layui.element;
         });
-//			切换已成单与未成单
+//			切换学员报名情况和学员基本信息
         $('.add-stu .title>span').eq(0).on('click', function () {
             $(this).addClass('title-pri').siblings().removeClass('title-pri');
             $('#tab2').hide();
@@ -343,7 +344,7 @@
         laydate.render({
             elem: '#hd-time'
         });
-        //添加专业内复选框
+        //已报课程复选框
         $('.add-check .check-title').click(function () {
             if ($('.check-box').css('display') == "none") {
                 $('.check-box').css('display', 'block');
@@ -359,7 +360,7 @@
             $('.check-box').css('display', 'none');
             $('.add-check .layui-edge').removeClass('layui-edge-checked')
         });
-        $('.add-check').click(function () {
+        $('.add-check').click(function (event) {
             event.stopPropagation();
         })
 

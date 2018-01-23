@@ -7,7 +7,7 @@ body{font-family: "微软雅黑"}
 .layui-btn{border-radius: 5px;}
 .mg0{margin: 0 !important;}
 /*学员信息添加页面样式*/
-.add-stu .title,.stu-list .title,.my-stu .title,.xgs-mes-detail .title{
+.add-stu .title,.stu-list .title,.my-stu .title,.xgs-mes-detail .title,.agent-add .title{
 	width: 100%;
 	box-sizing: border-box;
 	height: 45px; 
@@ -30,22 +30,22 @@ body{font-family: "微软雅黑"}
 	margin-left: 30px;
 	color: #12756c !important;
 }
-.add-stu .layui-form,.xgs-mes-detail .layui-form{
+.add-stu .layui-form,.xgs-mes-detail .layui-form,.agent-add .layui-form{
 	display: block;
 	padding: 30px 20px;
 	font-size: 14px;
 	color: #333;
 }
-.add-stu .layui-form-item,.xgs-mes-detail .layui-form-item{margin-bottom: 30px;}
-.add-stu .layui-form-text,.xgs-mes-detail .layui-form-text{margin-bottom: 20px;}
-.add-stu .red,.xgs-mes-detail .red{color: red;display: inline-block;line-height: 38px;}
+.add-stu .layui-form-item,.xgs-mes-detail .layui-form-item,.agent-add .layui-form-item{margin-bottom: 30px;}
+.add-stu .layui-form-text,.xgs-mes-detail .layui-form-text,.agent-add .layui-form-text{margin-bottom: 20px;}
+.add-stu .red,.xgs-mes-detail .red,.agent-add .red{color: red;display: inline-block;line-height: 38px;}
 .add-stu .layui-form-label{width: 85px;}
-.add-stu .wid1,.xgs-mes-detail .wid1{width: 130px;}
-.add-stu .wid2,.xgs-mes-detail .wid2{width: 200px;}
-.add-stu .wid3{width: 770px;}
-.add-stu .wid4{width: 100px;}
-.add-stu textarea{border-radius: 5px;}
-.add-stu .layui-btn{
+.add-stu .wid1,.xgs-mes-detail .wid1,.agent-add .wid1{width: 130px;}
+.add-stu .wid2,.xgs-mes-detail .wid2,.agent-add .wid2{width: 200px;}
+.add-stu .wid3,.agent-add .wid3{width: 770px;}
+.add-stu .wid4,.agent-add .wid4{width: 100px;}
+.add-stu textarea,.agent-add textarea{border-radius: 5px;}
+.add-stu .layui-btn,.agent-add .layui-btn{
 	display: block;
 	width: 100px;
 	font-size: 16px;
@@ -90,7 +90,7 @@ body{font-family: "微软雅黑"}
 .stu-list .layui-table thead tr:hover,.my-stu .layui-table thead tr:hover{background: #1a8fe7 !important;}
 .stu-list .layui-table tr:hover,.my-stu .layui-table tr:hover{background:#fff !important;}
 .stu-list .layui-btn,.my-stu .layui-btn{font-weight: bold;}
- .layui-form-checkbox[lay-skin=primary] i,.my-stu .layui-form-checkbox[lay-skin=primary] i{width: 12px;height: 12px;line-height: 12px;}
+ .layui-form-checkbox[lay-skin=primary] i,.my-stu .layui-form-checkbox[lay-skin=primary] i{width: 12px;height: 12px;line-height: 12px;margin-top: 2px;}
 .layui-form-checkbox[lay-skin=primary] span{color: #333;}
 .bottom-search{margin-left: 35px;}
 .bottom-search .layui-inline+.layui-inline{margin-left: 20px;}
@@ -187,11 +187,16 @@ body{font-family: "微软雅黑"}
 }
 .xgs-mes-detail input[lay-verify=date]{background: url(../images/plus/datebg.png)no-repeat right 10px center #fff; width:150px;}
 .list-num .show-stu{border: 1px solid #ccc !important;color: #333 !important;margin-right: 30px}
+/*市场代理*/
+.agent-add .layui-form-label{width: 120px;}
+/*财务审核*/
+.confirm{color: #1a8fe7;font-weight: bold;}
 /*删除弹窗*/
  .del .layui-layer-title{background: #1a8fe7 !important; color: #fff !important;}
-.del .layui-layer-btn0,.layui-layer-btn1{border-radius:5px !important;}
+.del .layui-layer-btn0,.layui-layer-btn1{border-radius:5px !important;margin-top: 0 !important;}
+.del .layui-layer-btn{padding-top: 0 !important;}
 .del .layui-layer-btn1{margin-left: 20px;}
-.deltx{height:130px; line-height:145px; width: 360px; background: #fff; display: none; font-size: 16px; text-align: center;}
+.deltx{height:150px; line-height:150px; width: 360px; background: #fff; display: none; font-size: 16px; text-align: center;}
 /*分页*/
 #page{
 	text-align: center;

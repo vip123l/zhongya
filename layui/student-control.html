@@ -242,7 +242,7 @@
 						<td>A类</td>
 						<td>初试</td>
 						<td>
-							<button class="layui-btn">编辑</button>
+							<a href="add-student.html" class="layui-btn">编辑</a>
 							<button class="layui-btn layui-btn-warm dellist">删除</button>
 						</td>
 					</tr>
@@ -266,12 +266,13 @@
 						<td>A类</td>
 						<td>初试</td>
 						<td>
-							<button class="layui-btn">编辑</button>
+							<a href="add-student.html" class="layui-btn">编辑</a>
 							<button class="layui-btn layui-btn-warm dellist">删除</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
+			<!--表格下面表单-->
 			<form action="" class="layui-form bottom-search">
 				<input type="checkbox" name="" lay-skin="primary" title="全选" id="checkAll"  lay-filter="all">
 				<div class="layui-inline">
@@ -342,6 +343,7 @@
 	            }); 
 				form.render('checkbox');  
 			});
+//		  	如果有选择框不勾选，取消全选
 			form.on('checkbox(check-item)', function(data){
 				if($('.layui-table input[type="checkbox"]').length != $('.layui-table input[type="checkbox"]:checked').length){
                     $('#checkAll').prop('checked',false);
