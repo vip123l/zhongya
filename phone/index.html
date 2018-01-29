@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="introduce block">
-            <h3 class="center">课程简介</h3>
+            <h3 class="center h31">课程简介</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
                     <a class="arrow-left" href="#"></a>
@@ -234,7 +234,7 @@
             </div>
         </div>
         <div class="block teacher">
-            <h3 class="center">师资介绍</h3>
+            <h3 class="center h32">师资介绍</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
                     <a class="arrow-left" href="#"></a>
@@ -339,10 +339,6 @@
 <script src="js/swiper.min.js"></script>
 <script>
 //    课程简介轮播
-var mySwiper1 = new Swiper('#swiper-container1', {
-    loop:true,
-    grabCursor: true,
-})
 $('.introduce .arrow-left').on('click', function (e) {
     e.preventDefault()
     mySwiper1.swipePrev()
@@ -351,11 +347,17 @@ $('.introduce .arrow-right').on('click', function (e) {
     e.preventDefault()
     mySwiper1.swipeNext()
 })
-//   师资介绍 轮播
-var mySwiper2 = new Swiper('#swiper-container2', {
-    loop:true,
-    grabCursor: true,
+$('.h31').on('click', function () {
+    $(this).toggleClass('title-click');
+    $(this).next('.show').toggle();
+//    点击时候重新获取轮播宽度
+    mySwiper1 = new Swiper('#swiper-container1', {
+        loop:true,
+        grabCursor: true,
+    })
 })
+
+//   师资介绍 轮播
 $('.teacher .arrow-left').on('click', function (e) {
     e.preventDefault()
     mySwiper2.swipePrev()
@@ -364,20 +366,14 @@ $('.teacher .arrow-right').on('click', function (e) {
     e.preventDefault()
     mySwiper2.swipeNext()
 })
-//点击标题出现对应区块
-$('.block>h3').on('click', function () {
+$('.h32').on('click', function () {
     $(this).toggleClass('title-click');
     $(this).next('.show').toggle();
-//    点击时候重新获取轮播宽度
-    mySwiper1 = new Swiper('#swiper-container1', {
-        loop:true,
-        grabCursor: true,
-    })
+    //    点击时候重新获取轮播宽度
     mySwiper2 = new Swiper('#swiper-container2', {
         loop:true,
         grabCursor: true,
     })
-
 })
 </script>
 </body>
