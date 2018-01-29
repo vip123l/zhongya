@@ -19,7 +19,7 @@
     </div>
     <div class="type-list">
         <div class="listen block center">
-            <h3 class="title-click">课程试听</h3>
+            <h3 class="title-click" onclick="change(this)">课程试听</h3>
             <div class="show">
                 <div class="content">
                     <span class="left">建筑类</span>
@@ -73,13 +73,46 @@
             </div>
         </div>
         <div class="introduce block">
-            <h3 class="center h31">课程简介</h3>
+            <h3 class="center" onclick="show1(this)">课程简介</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
                     <a class="arrow-left" href="#"></a>
                     <a class="arrow-right" href="#"></a>
                     <div class="swiper-container"  id="swiper-container1">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="swiper-title">
+                                        <span>面授</span>
+                                        <h4>基础精讲班</h4>
+                                    </div>
+                                    <div class="text">
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                适合学员
+                                            </div>
+                                            <div class="fl yjc">
+                                                <img src="images/ico1.png">
+                                                <p>适合有基础的考生，参加过考试或者准备过单科公共/实务、追求性价比的学员</p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                班型特色
+                                            </div>
+                                            <ul class="fl bxjs">
+                                                <li><span></span>1.集中周末授课</li>
+                                                <li><span></span>2.精讲课，紧扣教材，详解重难点</li>
+                                                <li><span></span>3.赠送高清精讲课网课</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn clearfix">
+                                        <a href="" class="fl">咨询价格</a>
+                                        <a href="" class="fr">在线咨询</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="box">
                                     <div class="swiper-title">
@@ -195,52 +228,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="box">
-                                    <div class="swiper-title">
-                                        <span>面授</span>
-                                        <h4>基础精讲班</h4>
-                                    </div>
-                                    <div class="text">
-                                        <div class="clearfix line">
-                                            <div class="left-name">
-                                                适合学员
-                                            </div>
-                                            <div class="fl yjc">
-                                                <img src="images/ico1.png">
-                                                <p>适合有基础的考生，参加过考试或者准备过单科公共/实务、追求性价比的学员</p>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix line">
-                                            <div class="left-name">
-                                                班型特色
-                                            </div>
-                                            <ul class="fl bxjs">
-                                                <li><span></span>1.集中周末授课</li>
-                                                <li><span></span>2.精讲课，紧扣教材，详解重难点</li>
-                                                <li><span></span>3.赠送高清精讲课网课</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="btn clearfix">
-                                        <a href="" class="fl">咨询价格</a>
-                                        <a href="" class="fr">在线咨询</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="block teacher">
-            <h3 class="center h32">师资介绍</h3>
+            <h3 class="center" onclick="show2(this)">师资介绍</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
                     <a class="arrow-left" href="#"></a>
                     <a class="arrow-right" href="#"></a>
                     <div class="swiper-container" id="swiper-container2">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="img-bor">
+                                    <img src="images/t9.jpg">
+                                    <div class="describe">
+                                        <h4>余兴华</h4>
+                                        <p>国家一级消防工程师，国家一级注册建造师，从事消防设计多年，熟悉考试重点与难点，善于总结，深受学员喜爱。 </p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="img-bor">
                                     <img src="images/t1.jpg">
@@ -313,15 +322,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="img-bor">
-                                    <img src="images/t9.jpg">
-                                    <div class="describe">
-                                        <h4>余兴华</h4>
-                                        <p>国家一级消防工程师，国家一级注册建造师，从事消防设计多年，熟悉考试重点与难点，善于总结，深受学员喜爱。 </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -347,16 +347,13 @@ $('.introduce .arrow-right').on('click', function (e) {
     e.preventDefault()
     mySwiper1.swipeNext()
 })
-$('.h31').on('click', function () {
-    $(this).toggleClass('title-click');
-    $(this).next('.show').toggle();
+function show1(obj) {
+    change(obj)
 //    点击时候重新获取轮播宽度
     mySwiper1 = new Swiper('#swiper-container1', {
         loop:true,
-        grabCursor: true,
     })
-})
-
+}
 //   师资介绍 轮播
 $('.teacher .arrow-left').on('click', function (e) {
     e.preventDefault()
@@ -366,15 +363,19 @@ $('.teacher .arrow-right').on('click', function (e) {
     e.preventDefault()
     mySwiper2.swipeNext()
 })
-$('.h32').on('click', function () {
-    $(this).toggleClass('title-click');
-    $(this).next('.show').toggle();
+function show2(obj) {
+    change(obj)
     //    点击时候重新获取轮播宽度
     mySwiper2 = new Swiper('#swiper-container2', {
         loop:true,
-        grabCursor: true,
     })
-})
+}
+//    点击显示隐藏切换
+function change(obj) {
+    $(obj).toggleClass('title-click');
+    $(obj).next('.show').toggle();
+}
+
 </script>
 </body>
 </html>

@@ -144,14 +144,16 @@ h1,h2,h3,h4,h5,h6{
 }
 .listen .content .right .eq1:last-child{border: none}
 /*轮播样式*/
+.show{margin-top: 0.4rem}
 .introduce .content{
 	position: relative;
 	width: 100%;
-	/*overflow: hidden;*/
+	overflow: hidden;
+    padding-top: 0.03rem;
 }
 .introduce #swiper-container1 {
 	width: 85%;
-	height: 6rem;
+	height: 6.1rem;
 }
 .introduce .swiper-slide .box{
 	margin:0 0.12rem ;
@@ -233,15 +235,15 @@ h1,h2,h3,h4,h5,h6{
 .teacher .content{
 	position: relative;
 	width: 100%;
-	/*overflow: hidden;*/
+	overflow: hidden;
+    padding-top: 0.03rem;
 }
 .teacher #swiper-container2 {
 	width: 80%;
-	height: 3.55rem;
+	height: 3.49rem;
 }
 .teacher  .img-bor{
 	margin:0 0.2rem ;
-	/*height: 3.55rem;*/
 	box-shadow:0 0px 5px rgba(0,0,0,.2);
 	border: 1px solid #e5e5e5;
 	padding: 0.2rem;
