@@ -19,7 +19,7 @@
     </div>
     <div class="type-list">
         <div class="listen block center">
-            <h3 class="title-click" onclick="change(this)">课程试听</h3>
+            <h3 class="title-click" onclick="show(this)">课程试听</h3>
             <div class="show">
                 <div class="content">
                     <span class="left">建筑类</span>
@@ -73,11 +73,11 @@
             </div>
         </div>
         <div class="introduce block">
-            <h3 class="center" onclick="show1(this)">课程简介</h3>
+            <h3 class="center" onclick="show(this)" swiper-index="1">课程简介</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
-                    <a class="arrow-left" href="#"></a>
-                    <a class="arrow-right" href="#"></a>
+                    <a class="arrow-left" onclick="mySwiper[1].swipePrev()"></a>
+                    <a class="arrow-right" onclick="mySwiper[1].swipeNext()"></a>
                     <div class="swiper-container"  id="swiper-container1">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -234,11 +234,11 @@
             </div>
         </div>
         <div class="block teacher">
-            <h3 class="center" onclick="show2(this)">师资介绍</h3>
+            <h3 class="center" onclick="show(this)" swiper-index="2">师资介绍</h3>
             <div class="show" style="display: none">
                 <div class="content clearfix">
-                    <a class="arrow-left" href="#"></a>
-                    <a class="arrow-right" href="#"></a>
+                    <a class="arrow-left" onclick="mySwiper[2].swipePrev()"></a>
+                    <a class="arrow-right" onclick="mySwiper[2].swipeNext()"></a>
                     <div class="swiper-container" id="swiper-container2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -338,44 +338,17 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
-//    课程简介轮播
-$('.introduce .arrow-left').on('click', function (e) {
-    e.preventDefault()
-    mySwiper1.swipePrev()
-})
-$('.introduce .arrow-right').on('click', function (e) {
-    e.preventDefault()
-    mySwiper1.swipeNext()
-})
-function show1(obj) {
-    change(obj)
-//    点击时候重新获取轮播宽度
-    mySwiper1 = new Swiper('#swiper-container1', {
-        loop:true,
-    })
-}
-//   师资介绍 轮播
-$('.teacher .arrow-left').on('click', function (e) {
-    e.preventDefault()
-    mySwiper2.swipePrev()
-})
-$('.teacher .arrow-right').on('click', function (e) {
-    e.preventDefault()
-    mySwiper2.swipeNext()
-})
-function show2(obj) {
-    change(obj)
-    //    点击时候重新获取轮播宽度
-    mySwiper2 = new Swiper('#swiper-container2', {
-        loop:true,
-    })
-}
-//    点击显示隐藏切换
-function change(obj) {
+var mySwiper=[];
+function show(obj) {
     $(obj).toggleClass('title-click');
     $(obj).next('.show').toggle();
+    var index = $(obj).attr('swiper-index');
+    if(index){
+        mySwiper[index] = new Swiper('#swiper-container'+index, {
+            loop:true,
+        })
+    }
 }
-
 </script>
 </body>
 </html>
