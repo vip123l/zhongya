@@ -124,20 +124,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-form-item check">
+                <div class="layui-form-item check-money">
                     <!--勾选后此处input必填-->
-                    <span class="layui-form-label"><input type="checkbox" name="" title="全款：" lay-skin="primary"
-                                                          checked></span>
+                    <span class="layui-form-label"><input type="checkbox" name="" title="全款：" lay-skin="primary" lay-filter="money"></span>
                     <div class="layui-input-inline wid1">
-                        <input type="text" name="" class="layui-input">
+                        <input type="text" name="" class="layui-input money">
                     </div>
+                    <span class="red">（勾选后此处必填）</span>
                 </div>
-                <div class="layui-form-item check">
+                <div class="layui-form-item check-money">
                     <!--勾选后此处input必填-->
-                    <span class="layui-form-label"><input type="checkbox" name="" title="定金：" lay-skin="primary"></span>
+                    <span class="layui-form-label"><input type="checkbox" name="" title="定金：" lay-skin="primary" lay-filter="money"></span>
                     <div class="layui-input-inline wid1">
-                        <input type="text" name="" class="layui-input">
+                        <input type="text" name="" class="layui-input money">
                     </div>
+                    <span class="red">（勾选后此处必填）</span>
                 </div>
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">沟通记录：</label>
@@ -344,6 +345,10 @@
         laydate.render({
             elem: '#hd-time'
         });
+//        勾选定金或全款，后面输入框必须输入
+        form.on('checkbox(money)', function(data){
+            checkm();
+        });
         //已报课程复选框
         $('.add-check .check-title').click(function () {
             if ($('.check-box').css('display') == "none") {
@@ -380,7 +385,16 @@
             $('.check-title .layui-input').val(val);
         });
     }
-
+//    勾选定金或全款，后面输入框必须输入
+    function checkm() {
+        $('.check-money input[type=checkbox]').each(function () {
+            if ($(this).prop('checked')) {
+                $(this).parents('.check-money').find('input[type="text"]').attr("required",'')
+            }else{
+                $(this).parents('.check-money').find('input[type="text"]').removeAttr('required')
+            }
+        });
+    }checkm();
 
     //页面加载完的时候先运行一下
     get_box_val();
