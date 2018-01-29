@@ -149,7 +149,7 @@ h1,h2,h3,h4,h5,h6{
 	width: 100%;
 	/*overflow: hidden;*/
 }
-.introduce .swiper-container {
+.introduce #swiper-container1 {
 	width: 85%;
 	height: 6rem;
 }
@@ -235,11 +235,11 @@ h1,h2,h3,h4,h5,h6{
 	width: 100%;
 	/*overflow: hidden;*/
 }
-.teacher .swiper-container {
+.teacher #swiper-container2 {
 	width: 80%;
 	height: 3.55rem;
 }
-.teacher .swiper-slide .img-bor{
+.teacher  .img-bor{
 	margin:0 0.2rem ;
 	/*height: 3.55rem;*/
 	box-shadow:0 0px 5px rgba(0,0,0,.2);
