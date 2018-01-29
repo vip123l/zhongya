@@ -149,18 +149,18 @@ h1,h2,h3,h4,h5,h6{
 	width: 100%;
 	/*overflow: hidden;*/
 }
-.swiper-container {
+.introduce .swiper-container {
 	width: 85%;
 	height: 6rem;
 }
-.swiper-slide .box{
+.introduce .swiper-slide .box{
 	margin:0 0.12rem ;
 	height: 6rem;
 	box-shadow:0 0px 5px rgba(0,0,0,.2);
 	border: 1px solid #e5e5e5;
 	position: relative;
 }
-.arrow-left,.arrow-right{
+.introduce .arrow-left,.introduce .arrow-right{
 	position: absolute;
 	top: 0;
 	width: 0.45rem;
@@ -168,14 +168,14 @@ h1,h2,h3,h4,h5,h6{
 	z-index: 999;
 	background-color: rgba(255,255,255,0.7) !important;
 }
-.arrow-left {left: 0px;background: url("../images/left.png") no-repeat right center ;background-size: 0.3rem}
-.arrow-right {  right: 0px;background: rgba(255,255,255,0.5) url("../images/right.png") no-repeat left center;background-size: 0.3rem}
+.introduce .arrow-left {left: 0px;background: url("../images/left.png") no-repeat right center ;background-size: 0.3rem}
+.introduce .arrow-right {  right: 0px;background: rgba(255,255,255,0.5) url("../images/right.png") no-repeat left center;background-size: 0.3rem}
 /*课程简介*/
-.swiper-title{width: 95%;position: relative;line-height: 0.8rem;height: 0.8rem;border-bottom: 1px solid #e5e5e5;margin: 0 auto}
-.swiper-title h4{text-align: center;font-size: 0.32rem;}
-.swiper-title span{position: absolute;left: 0.1rem;display: inline-block;color: #ff9257;font-size: 0.32rem;}
-.swiper-slide .text{width: 95%;overflow: hidden;margin: 0 auto}
-.swiper-slide .text .left-name{
+.introduce .swiper-title{width: 95%;position: relative;line-height: 0.8rem;height: 0.8rem;border-bottom: 1px solid #e5e5e5;margin: 0 auto}
+.introduce .swiper-title h4{text-align: center;font-size: 0.32rem;}
+.introduce .swiper-title span{position: absolute;left: 0.1rem;display: inline-block;color: #ff9257;font-size: 0.32rem;}
+.introduce .swiper-slide .text{width: 95%;overflow: hidden;margin: 0 auto}
+.introduce .swiper-slide .text .left-name{
 	float: left;
 	font-size: 0.28rem;
 	width:15%;
@@ -185,13 +185,13 @@ h1,h2,h3,h4,h5,h6{
 	margin-top: 0.2rem;
 	border-radius: 2px;
 }
-.yjc{margin: 0.2rem 0;width: 84%}
-.yjc img{width: 0.9rem;display: inline-block;margin-left: 0.15rem;float: left}
-.yjc p{font-size: 0.24rem;line-height: 0.4rem;margin-left: 0.1rem;width: 71%;display: inline-block}
-.bxjs{margin:0.2rem 0 0.2rem 0.15rem;}
-.bxjs li{margin-bottom: 0.4rem;font-size: 0.22rem}
-.bxjs li:last-child{margin: 0}
-.bxjs li span{
+.introduce .yjc{margin: 0.2rem 0;width: 84%}
+.introduce .yjc img{width: 0.9rem;display: inline-block;margin-left: 0.15rem;float: left}
+.introduce .yjc p{font-size: 0.24rem;line-height: 0.4rem;margin-left: 0.1rem;width: 71%;display: inline-block}
+.introduce .bxjs{margin:0.2rem 0 0.2rem 0.15rem;}
+.introduce .bxjs li{margin-bottom: 0.4rem;font-size: 0.22rem}
+.introduce .bxjs li:last-child{margin: 0}
+.introduce .bxjs li span{
 	display: inline-block;
 	margin-right: 0.1rem;
 	width: 0.3rem;
@@ -211,9 +211,9 @@ h1,h2,h3,h4,h5,h6{
 	background-color: #ff9257;
 	font-size: 0.28rem;
 }
-.bhkc{margin-top: 0.2rem}
-.mar{margin-left: 0.15rem;margin-right: 0.25rem}
-.bhkc li{
+.introduce .bhkc{margin-top: 0.2rem}
+.introduce .mar{margin-left: 0.15rem;margin-right: 0.25rem}
+.introduce .bhkc li{
 	padding-left: 0.3rem;
 	background: url("../images/ico2.png") no-repeat left center;
 	background-size: 0.25rem;
@@ -221,11 +221,51 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 0.24rem;
 	margin-bottom: 0.2rem;
 }
-.bhkc li:last-child{margin: 0}
-.kc1,.kc2,.kc3{width: 81%;margin-bottom: 0.2rem;margin-left: 0.15rem}
-.kc1 li{margin-top: 0.2rem;font-size: 0.24rem}
-.kc2 li{margin-top: 0.1rem;font-size: 0.24rem}
-.kc2 li:first-child{margin-top: 0.2rem}
-.ml60{margin-left: 0.6rem}
-.mt80{margin-top: 0.8rem}
-.kc3 li{margin-top: 0.2rem;font-size: 0.24rem}
+.introduce .bhkc li:last-child{margin: 0}
+.introduce .kc1,.introduce .kc2,.introduce .kc3{width: 81%;margin-bottom: 0.2rem;margin-left: 0.15rem}
+.introduce .kc1 li{margin-top: 0.2rem;font-size: 0.24rem}
+.introduce .kc2 li{margin-top: 0.1rem;font-size: 0.24rem}
+.introduce .kc2 li:first-child{margin-top: 0.2rem}
+.introduce .ml60{margin-left: 0.6rem}
+.introduce .mt80{margin-top: 0.8rem}
+.introduce .kc3 li{margin-top: 0.2rem;font-size: 0.24rem}
+/*师资简介轮播*/
+.teacher .content{
+	position: relative;
+	width: 100%;
+	/*overflow: hidden;*/
+}
+.teacher .swiper-container {
+	width: 80%;
+	height: 3.55rem;
+}
+.teacher .swiper-slide .img-bor{
+	margin:0 0.2rem ;
+	/*height: 3.55rem;*/
+	box-shadow:0 0px 5px rgba(0,0,0,.2);
+	border: 1px solid #e5e5e5;
+	padding: 0.2rem;
+	position: relative;
+}
+.teacher .arrow-left,.teacher .arrow-right{
+	position: absolute;
+	top: 0;
+	width: 0.45rem;
+	height: 3.55rem;
+	z-index: 999;
+	background-color: rgba(255,255,255,0.7) !important;
+}
+.teacher .arrow-left {left: 0px;background: url("../images/left2.png") no-repeat right center ;background-size: 0.3rem}
+.teacher .arrow-right {  right: 0px;background: url("../images/right2.png") no-repeat left center;background-size: 0.3rem}
+.teacher  .img-bor img{width: 100%}
+.teacher  .img-bor .describe{
+	margin: 0.25rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	color: #ffd429;
+	line-height: 0.34rem;
+	padding: 0.1rem;
+}
+.describe h4{font-size: 0.3rem;text-align: center}
