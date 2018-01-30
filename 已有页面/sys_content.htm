@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>中业后台管理系统</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/sys_content.css">
+		<link rel="stylesheet" href="css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	</head>
+
+	<body class="layui-layout-body">
+		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+		<!--[if lt IE 9]>
+		    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+		    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<div class="layui-layout layui-layout-admin">
+
+			<div class="layui-header" id="header">
+				<!-- logo -->
+				<div class="layui-logo">
+					<img src="images/plus/logo.png">
+					<i class="layui-icon cdclose">&#xe65f;</i>
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div id="Menu">
+					<ul class="layui-nav top-menu layui-layout-left" lay-filter="top-menu">
+						<li class="layui-nav-item layui-this">
+							<a href="javascript:;">网站设置</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">CRM管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">OA办公</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">CRM行政</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">产品管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">CMS管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">活动产品</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">剪辑约课</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">导出管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">数据管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">导出管理</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">数据管理</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;"><i class="layui-icon">&#xe68e;</i>首页</a>
+					</li>
+					<li class="layui-nav-item shezhi">
+						<a href="javascript:;"><i class="layui-icon">&#xe612;</i>杨伊_8001</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">密码修改</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">安全退出</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 左侧菜单栏 -->
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+
+					<!-- 网站设置 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item layui-this">
+							<a href="javascript:;" class="titlater">订单系统<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">订单添加</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">订单查询</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">发票添加</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">临时开课</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">临时开课列表</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="titlater">业务管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">咨询创建</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">销售创建</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">班主任信息管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">咨询机会</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">销售机会</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="titlater">云市场<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="titlater">发布商品<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+						</li>
+					</ul>
+					<!-- CRM设置  -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a href="javascript:;" class="titlater">CRM设置<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">CRM设置1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">CRM设置2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- OA办公 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">OA办公<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">OA办公1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">OA办公2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- CRM行程 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">CRM行程<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">CRM行程1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">CRM行程2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- 产品管理 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">产品管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">产品管理1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">产品管理2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- CMS管理 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">CMS管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">CMS管理1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">CMS管理2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- 活动产品  -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">活动产品<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">活动产品1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">活动产品2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- 剪辑约课 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">剪辑约课<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">剪辑约课1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">剪辑约课2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- 导出管理 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">导出管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">导出管理1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">导出管理2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<!-- 数据管理 -->
+					<ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+						<li class="layui-nav-item  layui-nav-itemed">
+							<a href="javascript:;" class="titlater">数据管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">数据管理1</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">数据管理2</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 内容主体区域 -->
+			<div class="layui-body" style="color: #333;">
+				<!--二级分类切换-->
+				<div class="layui-tab layui-tab-card container">
+					<!--切换的标题-->
+					<div style="position: fixed;width: 100%;z-index: 111;">
+						<ul class="layui-tab-title sys-tab1">
+							<li class="layui-this">添加专业</li>
+							<li>添加报名条件</li>
+							<li>报考条件查询</li>
+						</ul>
+					</div>
+					<!--切换对应内容-->
+					<div class="layui-tab-content sys-content">
+						<!--添加专业内容-->
+						<div class="layui-tab-item layui-show">
+							<form class="layui-form mt form1-wid top-search">
+								<a class="layui-btn zy">添加专业</a>
+								<div class="inp">
+									<label>类别</label>
+									<select>
+										<option value="一级建造师">请选择</option>
+										<option value="二级建造师">请选择</option>
+									</select>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="inp">
+									<label>项目</label>
+									<select>
+										<option value="一级建造师">请选择</option>
+										<option value="二级建造师">二级建造师</option>
+									</select>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="inp">
+									<label>专业</label>
+									<input type="text" name="title"  placeholder="请输入" autocomplete="off" class="layui-input">
+									<div style="clear: both;"></div>
+								</div>
+								<button class="layui-btn tj-btn">查询</button>
+							</form>
+
+							<table class="layui-table table1">
+								<thead>
+									<tr>
+										<th>类别</th>
+										<th>项目</th>
+										<th>专业</th>
+										<th width="190px">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>工程及工程经济</td>
+										<td>
+											<form class="layui-form">
+												<span>
+												<select>
+													<option value="一级建造师">一级建造师</option>
+													<option value="二级建造师">二级建造师</option>
+												</select>
+											</span>
+											</form>
+										</td>
+										<td>
+											<form class="layui-form">
+												<span>
+												<select>
+													<option value="一级建造师">一级建造师</option>
+													<option value="二级建造师">二级建造师</option>
+												</select>
+											</span>
+											</form>
+										</td>
+										<td class="td-btn">
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
+										</td>
+									</tr>
+									<tr>
+										<td>贤心</td>
+										<td>
+											<form class="layui-form">
+												<span>
+													<select>
+														<option value="一级建造师">一级建造师</option>
+														<option value="二级建造师">二级建造师</option>
+													</select>
+												</span>
+											</form>
+										</td>
+										<td>
+											<form class="layui-form">
+												<span>
+													<select>
+														<option value="一级建造师">一级建造师</option>
+														<option value="二级建造师">二级建造师</option>
+													</select>
+												</span>
+											</form>
+										</td>
+										<td class="td-btn" width="190px">
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--添加报名条件部分-->
+						<div class="layui-tab-item">
+							<form class="layui-form mt form2-wid  top-search">
+								<a class="layui-btn alert-bm">添加报名条件</a>
+								<div class="inp">
+									<label>类别</label>
+									<select>
+										<option value="一级建造师">一级建造师</option>
+										<option value="二级建造师">二级建造师</option>
+									</select>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="inp">
+									<label>项目</label>
+									<select>
+										<option value="一级建造师">一级建造师</option>
+										<option value="二级建造师">二级建造师</option>
+									</select>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="inp">
+									<label>添加人</label>
+									<input type="text" name="title"  placeholder="请输入" autocomplete="off" class="layui-input">
+									<div style="clear: both;"></div>
+								</div>
+								<button class="layui-btn bm-btn">查询</button>
+							</form>
+							
+							<table class="layui-table table2">
+								<thead>
+									<tr>
+										<th>类别</th>
+										<th>项目</th>
+										<th>添加人</th>
+										<th>添加时间</th>
+										<th>更新时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>建筑类</td>
+										<td>一级建造师</td>
+										<td>张三</td>
+										<td>2017-12-10 14:32:00</td>
+										<td>2017-12-10 14:32:00</td>
+										<td class="td-btn">
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
+										</td>
+									</tr>
+									<tr>
+										<td>建筑类</td>
+										<td>一级建造师</td>
+										<td>张三</td>
+										<td>2017-12-10 14:32:00</td>
+										<td>2017-12-10 14:32:00</td>
+										<td class="td-btn">
+											<button class="layui-btn layui-btn-sm layui-btn-normal editor">编辑</button>
+											<button class="layui-btn layui-btn-sm layui-btn-warm delete" style="margin-left: 30px;">删除</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--分页-->
+							<div id="page">
+								<a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a>
+								<a href="javascript:;" data-page="1" class="page-click">1</a>
+								<a href="javascript:;" data-page="2">2</a>
+								<a href="javascript:;" data-page="3">3</a>
+								<a href="javascript:;" data-page="4">4</a>
+								<a href="javascript:;" data-page="5">5</a>
+								<span class="page-spr">…</span>
+								<a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="7">7</a>
+								<a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a>
+							</div>
+						</div>
+						<!--报考条件查询内容-->
+						<div class="layui-tab-item">
+							<ul class="object mt">
+								<li class="check-bg">建筑类</li>
+								<li>建筑类</li>
+								<li>建筑类</li>
+								<li>建筑类</li>
+								<li>建筑类</li>
+							</ul>
+							<!--分类需切换的对应内容-->
+							<div class="cate">
+								<!--默认显示第一个类目display: block-->
+								<div class="obj-tab-item" style="display: block;">
+									<!--查询条件-->
+									<div class="obj-form">
+										<form action="">
+											<label class="obj-bel">专业</label>
+											<input type="text" name="title" required lay-verify="required" placeholder="输入所学专业" autocomplete="off" class="layui-input obj-inp">
+											<button class="layui-btn">查询</button>
+											<span>标签：建筑材料与制品，此专业相关</span>
+										</form>
+									</div>
+									<div class="obj-content mt">
+										<!--每个li点击添加对应的liN-click和对应的i加上liN-i，默认选第一个，四个颜色一循环-->
+										<ul class="obj-title">
+											<li class="li1 li1-click">
+												一级建造
+												<i class="layui-icon  li1-i">&#xe625;</i>
+											</li>
+											<li class="li2">
+												一级建造
+												<i class="layui-icon">&#xe625;</i>
+											</li>
+											<li class="li3">
+												一级建造
+												<i class="layui-icon">&#xe625;</i>
+											</li>
+											<li class="li4">
+												一级建造
+												<i class="layui-icon">&#xe625;</i>
+											</li>
+										</ul>
+										<div style="clear: both;"></div>
+										<!--每个名称对应的解释-->
+										<div class="obj-text">
+											<!--默认解释第一个名称-->
+											<div class="text-box" style="display: block;">
+												<p>一级建造师</p>
+												<p>（一）凡遵守国家法律、法规，具备下列条件之一者，可以申请参加一级建造师执业资格考试：</p>
+												<p>1、取得工程类或工程经济类大学专科学历，工作满6年，其中从事建设工程项目施工管理工作满4年。</p>
+												<p>2、取得工程类或工程经济类大学本科学历，工作满4年，其中从事建设工程项目施工管理工作满3年。</p>
+												<p>3、取得工程类或工程经济类双学士学位或研究生班毕业，工作满3年，其中从事建设工程项目施工管理工作满2年。</p>
+												<p>4、取得工程类或工程经济类硕士学位，工作满2年，其中从事建设工程项目施工管理工作满1年</p>
+												<p>5、取得工程类或工程经济类博士学位，从事建设工程项目施工管理工作满1年。</p>
+												<p>免考条件</p>
+												<p>凡符合上述（一）的报名条件，于2003年12月31日前，取得原住建部颁发的《建筑业企业一级项目经理资质证书》，并符合下列条件之一的人员，可免试《建设工程经济》和《建设工程项目管理》两个科目，只参加《建设工程法规及相关知识》和《专业工程管理与实务》两个科目的考试：</p>
+												<p>1、受聘担任工程或工程经济类高级专业技术职务。</p>
+												<p>2、具有工程类或工程经济类大学专科以上学历并从事建设项目施工管理工作满20年。</p>
+												<p>增项</p>
+												<p>（三）已取得一级建造师执业资格证书的人员，也可根据实际工作需要，选择《专业工程管理与实务》科目的相应专业，报名参加“一级建造师相应专业考试”，报考人员须提供资格证书等有关材料方能报考。</p>
+												<p>上述报名条件中有关学历或学位的要求是指经国家教育行政主管部门承认的正规学历或学位，从事建设工程项目施工管理工作年限是指取得规定学历前、后从事该项工作的时间总和，其截止日期为2015年年底。</p>
+											</div>
+											<div class="text-box">
+												<p>2级建造师</p>
+											</div>
+											<div class="text-box">
+												<p>3级建造师</p>
+											</div>
+											<div class="text-box">
+												<p>4级建造师</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--第二个类目对应显示的内容-->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!--页面把涉及的弹层都放在body第一级里-->
+		<!--添加专业弹窗-->
+		<div class="add-zy">
+			<form class="layui-form">
+				<div class="layer-form">
+					<label>类别</label>
+					<input type="text" name="title" required lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input layer-input">
+				</div>
+				<div class="layer-form">
+					<label>项目</label>
+					<div class="add-check">
+						<div class="check-title">
+							<input type="text" placeholder="请选择" value="" readonly="" class="layui-input">
+							<i class="layui-edge"></i>
+						</div>
+						<ul class="check-box">
+							<li><input type="checkbox"  lay-filter="test"  name="item" value="写作" title="写作" lay-skin="primary"></li>
+							<li><input type="checkbox" lay-filter="test" name="item" value="写作2" title="写作2" lay-skin="primary"></li>
+						</ul>
+					</div>					
+				</div>
+				<div style="clear: both;"></div>
+				<div class="layer-form set1">
+					<label>专业</label>
+					<textarea style="width: 630px;"></textarea>
+				</div>
+			</form>
+			<div class="font-red">多个专业名，请用逗号隔开，不分全半角。</div>
+		</div>
+		
+		<!--添加报名条件弹窗-->
+		<div class="add-bk">
+			<form class="layui-form">
+				<div class="layer-form">
+					<label>类别</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div class="layer-form">
+					<label>项目</label>
+					<select>
+						<option value="一级建造师">请选择</option>
+						<option value="二级建造师">请选择</option>
+					</select>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="layer-form set2">
+					<label>内容</label>
+					<script id="editor" type="text/plain"  style="width:818px;height:330px;float: left;"></script>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript" src="layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="lay/modules/form.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/sys_content.js" charset="utf-8"></script>
+		<!--编辑器js-->
+		<script type="text/javascript" src="editor/ueditor.config.js" charset="utf-8"></script>
+		<script type="text/javascript" src="editor/ueditor.all.js" charset="utf-8"></script>
+		<script type="text/javascript">
+        	var ue = UE.getEditor('editor',{
+        		elementPathEnabled : false
+        	});
+		</script>
+	</body>
+
+</html>

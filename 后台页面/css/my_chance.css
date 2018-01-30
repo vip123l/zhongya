@@ -1,0 +1,466 @@
+.layui-table .layui-table-sort{padding: 0 !important;  margin: 0 !important; width: 20px !important;}
+.layui-table .layui-table-sort:hover i{border-bottom-color: #666 !important; border-top-color: #666 !important;}
+body,a,input{
+	font-family: "微软雅黑" !important;color: #333;}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+input,.layer-form input{border-radius: 5px;color: #333;}
+.layui-btn{border-radius: 5px;}
+.layui-body{
+	font-size: 14px;
+	overflow:auto ;
+}
+.my-btn{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	color: #fff;
+}
+.btn1{
+	padding: 0;
+	line-height: 28px;
+	background-color: #12756c;
+	width: 65px;
+	height: 28px;
+}
+.qd{
+	margin-left: 32px !important;
+}
+.body-title{
+	width: 100%;
+	padding: 10px 22px 7px 22px;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #ccc;
+	box-sizing: border-box;
+}
+.body-title .left{
+	font-weight: bold;
+	line-height: 28px;
+}
+/*顶部搜索*/
+.top-search{
+	width: 1675px;
+	padding: 0 22px;
+	margin-top: 30px;
+	position: relative;
+}
+.top-search .inp-list{
+	margin-bottom: 25px;
+}
+.top-search .inp-list li{
+	display: inline-block;
+}
+.top-search label{
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	padding: 0;
+	margin: 0 25px 0 54px;
+	text-align: right;
+}
+.top-search .inp-list li:first-child label{
+	width: 70px;
+	display: inline-block;
+	margin-left: 0;
+}
+.top-search li input{
+	width: 110px;
+	height: 35px;
+	border-radius: 5px;
+}
+#chance-time,#zp-time{
+	width: 220px;
+}
+.top-search .updown{
+	position: absolute;
+    right: 45px;
+    top: 7px;
+    cursor: pointer;
+}
+.btn-search{
+	width: 110px;
+	height: 35px;
+	margin-right: 57px;
+	background-color: #1aa195;
+}
+.layui-form-select dl dd.layui-this{
+	background-color:#1aa195
+}
+
+/*分页*/
+#page{
+	text-align: center;
+	margin-top: 30px;
+	width: 95%;
+}
+#page a, #page span,.page-spr{
+	margin-left: 10px !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.page-spr{
+	border: none;
+}
+#page .page-click{
+	background-color: #1aa195;
+	color: #fff;
+}
+/*表格*/
+.table{
+	width: 1675px;
+	padding: 0 22px;
+	margin-top: 25px;
+}
+.layui-table td{
+	text-align: center;
+}
+.layui-table th{
+	text-align: center;
+	font-weight: bold;
+}
+.layui-table thead tr{
+	background-color: #eee;
+}
+.layui-table tbody tr:hover{
+	background: none;
+}
+.layui-table td, .layui-table th{
+	border-color: #e5e5e5;
+	height: 45px;
+	padding: 0 3px;
+	color: #333;
+}
+.last-bz{
+	max-width: 244px;
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis
+}
+.kc{
+	max-width:125px;
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis
+}
+.btn-see,.btn-talk,.btn-del,.btn-tk{
+	padding: 0 8px;
+	height: 28px;
+	line-height: 28px;
+}
+.btn-see{
+	background-color: #1aa195;
+}
+.btn-talk{
+	background-color: #1a8fe7;
+}
+.btn-del{
+	background-color: #ff9a00;
+}
+.btn-tk{
+	background-color: #fd7285;
+}
+.layui-table-sort .layui-table-sort-asc{
+	border-bottom-color:#999;
+}
+.layui-table-sort .layui-table-sort-desc{
+	border-top-color:#999;
+}
+/*弹框样式*/
+.layer-see .layui-layer-title{
+	background-color: #1aa195;
+	color: #fff;
+	font-weight: bold;
+}
+.layer-see table{
+	margin: 0;
+}
+.layer-see .layui-layer-ico,.layer-five .layui-layer-ico,.layer-talk .layui-layer-ico{
+	background: url(../images/plus/cha.png) no-repeat;
+	background-position: center !important;
+}
+.layer-del .layui-layer-title{
+	font-weight: bold;
+	background-color: #ff9a00;
+	color: #fff;
+}
+.layer-del .layui-layer-content{
+	line-height: 120px !important;
+	text-align: center;
+	font-size: 16px !important;
+}
+.layer-del .layui-layer-btn0,.layer-del .layui-layer-btn1,.layer-five .layui-layer-btn0,.layer-talk .layui-layer-btn0,.layer-talk .layui-layer-btn1{
+	height: 33px;
+	line-height: 33px;
+	border-radius: 5px;
+	padding: 0 13px;
+	margin-top: 0;
+}
+.layer-del .layui-layer-ico{
+	background:none !important;
+}
+.layer-del .layui-layer-btn0{
+	background-color: #ff9a00 !important;
+	border: 1px solid #ff9a00 !important;
+}
+.layer-del .layui-layer-btn1,.layer-talk .layui-layer-btn1{
+	margin-left: 15px;
+}
+.five ul{
+	overflow: hidden;
+}
+.five li{
+	width: 105px;
+	line-height: 30px;
+	height: 30px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 24px;
+	margin-top: 24px;
+	cursor: pointer;
+}
+.five-click{
+	border: 2px solid #12756c !important;
+	height: 28px !important;
+	line-height: 28px !important;
+	width: 103px !important;
+}
+.layer-five .layui-layer-title{
+	font-weight: bold;
+	background-color: #12756c;
+	color: #fff;
+}
+.layer-five .layui-layer-btn{
+	padding-bottom: 18px;
+}
+.layer-five .layui-layer-btn0{
+	background-color: #12756c !important;
+	border: 1px solid #12756c !important;
+}
+.layui-laydate-list.laydate-time-list > li{width:50% !important;}
+.layui-laydate-list.laydate-time-list > li:last-child{display:none !important;}
+/*沟通*/
+.tel-label{
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0 17px 0 40px;
+	float: left;
+}
+.talk .layui-block{
+	margin-top: 30px;
+}
+.talk .layui-block input{
+	width: 110px;
+	padding-left: 8px;
+	border-radius: 5px;
+	cursor: not-allowed;
+}
+.talk .layui-block input:hover{border-color: #E6E6E6;}
+.gt-state{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.xing span{
+	color: red;
+}
+.xing{
+	font-weight: bold;
+	line-height: 35px;
+	margin: 0 18px;
+	float: left;
+}
+.gt-state ul{
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+.gt-state li,.bz li{
+	width: 110px;
+	line-height: 33px;
+	height: 33px;
+	border: 1px solid #e6e6e6;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #666;
+}
+.gt-click,.bz-click{
+	background-color: #1a8fe7;
+	border: 1px solid #1a8fe7 !important;
+	color: #fff !important;
+}
+.bz{overflow: hidden;}
+.bz ul{
+	width: 925px;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+.bz li{
+	margin-bottom: 20px;
+}
+.bz-text{
+	padding: 15px;
+	width: 905px;
+	height: 90px;
+	box-sizing:border-box;
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	margin-left: 102px;
+}
+.next-time{
+	margin: 20px 0;
+}
+.time-box{
+	width: 150px;
+	display: block;
+	float: left;
+}
+.time-box input{border-radius: 5px;}
+.next-time .red{
+	color: red;
+	line-height: 35px;
+	margin-left: 20px;
+}
+ .blue{
+	display: inline-block;
+	width: 102px;
+	text-align: center;
+	color: #1a8fe7;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 10px 0 ;
+	cursor: pointer;
+}
+.show-box{
+	display: none;
+	width: 768px;
+	margin-left: 102px;
+}
+.show-box tr{
+	position: relative;
+}
+.show-box label{
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	padding: 0;
+	margin: 0 13px 0 40px;
+	text-align: right;
+	min-width: 30px;
+}
+.show-box  li:first-child label{
+	display: inline-block;
+	margin-left: 0;
+}
+.show-box li input{
+	width: 110px;
+	height: 35px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.layer-talk .layui-layer-btn{
+	text-align: left;
+	padding: 25px 0 25px 135px !important;
+}
+.layer-talk .layui-layer-title{
+	font-weight: bold;
+	background-color: #1a8fe7;
+	color: #fff;
+}
+.action{
+	color: #1a8fe7;
+	font-weight: bold;
+	cursor: pointer;
+}
+.action:hover{
+	color: #1a8fe7;
+}
+.lyjl{
+	width: 765px;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+}
+
+/*小电脑样式*/
+@media screen and (max-width: 1366px){
+    .top-search{
+		margin-top: 20px;
+		font-size: 12px;
+	}
+	.top-search .inp-list{
+		margin-bottom: 10px;
+	}
+	#chance-time, #zp-time{
+		width: 170px;
+	}
+	.table{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.table .layui-table td,.table .layui-table th{
+		padding: 0 3px;
+		font-size: 12px;
+	}
+	.top-search,.table,.body-title{
+		width: 1426px;
+	}
+	.body-title{
+		box-sizing: content-box;
+	}
+	.top-search .updown{
+		right: 35px;
+	}
+	.top-search .updown img{
+		width: 13px;
+		height: 13px;
+	}
+	.top-search label{
+		margin: 0 18px 0 35px;
+		height: 30px;
+		line-height: 30px;
+	}
+	#page{
+		margin-top: 20px;
+	}
+	#page a, #page span, .page-spr{
+		padding: 0 10px;
+		height: 26px;
+    	line-height: 26px;
+    	font-size: 12px
+	}
+	.btn-search{
+		height: 30px;
+		line-height: 30px;
+		margin-right: 46px;
+	}
+	.gt-state{
+		margin-top: 20px;
+	}
+	.top-search li input{
+		height: 30px;
+		line-height: 1px;
+	}
+	.qd{
+		margin-left: 20px !important;
+	}
+}
