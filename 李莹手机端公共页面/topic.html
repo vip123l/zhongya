@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <link href="css/topic.css" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>题库通</title>
+</head>
+<body>
+<div class="wrap topic">
+    <header><span></span></header>
+    <div class="top-num">1/80</div>
+    <div class="question">
+        <div class="top"><span>[单选题]</span>1、关于民用建筑构造要求的说法，错误的是(    )。</div>
+        <ul class="opt">
+            <!--正确时候颜色-->
+            <li><span class="opt-blue">A</span>选项选项选项选项选项</li>
+            <!--错误时候颜色-->
+            <li><span class="opt-red">B</span>选项选项选项选项选项</li>
+            <li><span>C</span>选项选项选项选项选项</li>
+            <li><span>D</span>选项选项选项选项选项</li>
+        </ul>
+        <div class="see-answer">[查看解析]</div>
+    </div>
+    <div class="answer">
+        <ul class="clearfix ans-top">
+            <li class="fl">[正确答案] <span>A</span></li>
+            <li class="fr">[我的答案]<span>A</span></li>
+        </ul>
+        <div class="ans-content">
+            <h4>[解析]</h4>
+            <div>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+        </div>
+        <a href="" class="down">下载题库通，观看全国名师视频解析。</a>
+    </div>
+    <footer></footer>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+    $('.opt li').click(function () {
+        $(this).find('span').addClass('opt-blue');
+        $('.see-answer').show();
+        $('.opt li').off()
+    })
+    $('.see-answer').on('click',function () {
+        $('.answer').show();
+        $('.opt li').off()
+    })
+</script>
+</body>
+</html>

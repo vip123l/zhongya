@@ -1,8 +1,9 @@
-body{font-family: "微软雅黑"}
+body{font-family: "微软雅黑";color: #333}
 .fl{float: left}
 .fr{float: right}
 .layui-btn{border-radius: 5px;font-weight: bold;}
 .layui-anim{max-height: 200px !important;}
+.layui-select-title input{color: #333}
 /***消息列表页面样式***/
 .meslist{background: #ededed; color: #333;}
 /*消息列表标题*/
@@ -157,12 +158,26 @@ body{font-family: "微软雅黑"}
 
 /*订单管理*/
 /*订单管理标题*/
-.ordtitle,.advtitle{height: 65px;  background: #fff; }
-.ordtitle>p,.advtitle>p{width: 118px;line-height: 65px; border-right: 1px solid #e6e6e6; background: #ededed; font-size: 14px; color: #12756c; font-weight: bold; text-align: center;float: left}
-.ordtitle .layui-form,.advtitle .layui-form{margin-left: 40px !important; padding: 0 !important;display: block;float: left;margin-top: 14px}
-.ordtitle .layui-input-inline,.advtitle .layui-input-inline{vertical-align: top}
+.ordtitle,.advtitle{
+	height: 70px;
+	line-height: 70px;
+	box-shadow: 3px 3px 7px #ccc;
+	margin: 0 auto 30px;
+	background: #fff;
+	margin: 20px 0 30px 10px;
+	color: #333;
+}
+.ordtitle>p,.advtitle>p{
+	color: #12756c;
+	font-weight: bold;
+	margin-left: 30px;
+	display: inline-block;
+}
+.ordtitle .layui-form,.advtitle .layui-form{margin-left: 40px !important; padding: 0 !important;display: inline-block;}
+.ordtitle .layui-form-label,.advtitle .layui-form-label{vertical-align: middle;line-height: 50px}
+.ordtitle .layui-input-inline,.advtitle .layui-input-inline{vertical-align: middle;line-height: 50px}
 /*订单管理表单*/
-.order .layui-form,.adv .layui-form{margin-left: 30px; padding-top: 30px;}
+.order .layui-form{margin-left: 30px;color: #333}
 .order .layui-form .layui-form-label,.adv .layui-form .layui-form-label{padding: 9px 0; font-size: 14px; width: 74px;text-align: center}
 .order .layui-form .layui-input-block,.adv .layui-form .layui-input-block{margin-left: 78px;}
 .order .layui-form .wid1,.adv .layui-form .wid1{width: 130px;}
@@ -174,7 +189,7 @@ body{font-family: "微软雅黑"}
 .order .layui-table tr th,.adv .layui-table tr th{text-align: center; vertical-align: middle; height: 45px; font-size: 14px; color: #fff;  padding:0; font-weight: bold;}
 .order .layui-table tr th.ddnr{min-width: 150px}
 .order .layui-table tr td,.adv .layui-table tr td{text-align: center; vertical-align: middle; height: 43px; font-size: 14px; padding:0 5px;}
-.order .layui-table tr td button,.adv .layui-table tr td button{height: 28px; line-height: 28px; border-radius: 5px;padding: 0 14px;}
+.order .layui-table tr td button,.adv .layui-table tr td button,.adv .layui-table td a.layui-btn{height: 28px; line-height: 28px; border-radius: 5px;padding: 0 14px;}
 .order .layui-table thead tr:hover,.adv .layui-table thead tr:hover{background: #1aa195 !important;}
 .order .layui-table tr:hover,.adv .layui-table tr:hover{background:#fff !important;}
 .order .red{color: red}
@@ -204,6 +219,78 @@ body{font-family: "微软雅黑"}
 .adv .layui-table tr th.belong{width: 10% !important;}
 .adv .yl{position: relative;text-decoration: underline;cursor: pointer;color: #1E9FFF}
 .adv .yl-img{position: absolute;left: 80%;top: 65%;max-width: 640px !important;max-height: 320px;z-index: 11;display: none}
+/*广告编辑*/
+.add-appadv .add-title{
+	height: 70px;
+	line-height: 70px;
+	box-shadow: 3px 3px 7px #ccc;
+	margin: 0 auto 30px;
+	background: #fff;
+	margin: 20px 0 30px 10px;
+}
+.add-appadv .add-title>p{
+	color: #12756c;
+	font-weight: bold;
+	margin-left: 30px;
+	display: inline-block;
+}
+.add-appadv form{margin-left: 10px;margin-top: 30px}
+.ssapp .add-check{position: relative;display: inline-block;  }
+.ssapp .add-check .check-title{position: relative;}
+.ssapp .add-check .layui-input{
+	padding-right: 30px;
+	cursor: pointer;
+	width: 100%;
+}
+.ssapp .add-check .layui-edge {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -3px;
+	cursor: pointer;
+	border-width: 6px;
+	border-top-color: #c2c2c2;
+	border-top-style: solid;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+}
+.ssapp .layui-edge-checked{transform: rotate(180deg); margin-top: -9px !important;}
+.ssapp .check-box{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 42px;
+	padding: 5px 0;
+	z-index: 999;
+	min-width: 100%;
+	border: 1px solid #d2d2d2;
+	max-height: 300px;
+	overflow-y: auto;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.12);
+	box-sizing: border-box;
+}
+.ssapp .check-box li{line-height: 35px; padding: 0 10px;}
+.add-appadv .layui-form-item .layui-form-checkbox[lay-skin=primary]{margin-top: 0 !important;}
+.add-appadv .wid1{width: 150px}
+.add-appadv .wid2{width: 200px}
+.add-appadv form>.layui-btn{
+	display: block;
+	width: 100px;
+	font-size: 16px;
+	margin-left: 120px;
+}
+.add-appadv .red{line-height: 38px}
+/*数据表样式*/
+.tab-title{margin: 20px 0; text-align: center;color: #333}
+.tab-title .title1,.tab-title .title2,.tab-title .title3,.tab-title .title4{display: inline-block;margin:0 10px;cursor: pointer}
+.tab-click{color: #01AAED;}
+.tab .tab-content{text-align: center;padding-bottom: 20px}
+.tab .tab-time{text-align: center;font-size: 12px;color: #333}
+.tab .tab-content .tab2,.tab .tab-content .tab3,.tab .tab-content .tab4{display: none}
+.data-total{margin: 20px auto !important; width: 80% !important;}
+.data-total thead th{background-color: #01AAED;width: 25%}
 /*删除弹框*/
 .del .layui-layer-content{
 	line-height: 120px !important;

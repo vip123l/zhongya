@@ -231,6 +231,72 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="swiper-title">
+                                        <span>面授</span>
+                                        <h4>高级钻石班 </h4>
+                                    </div>
+                                    <div class="text">
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                适合学员
+                                            </div>
+                                            <div class="fl yjc">
+                                                <img src="images/ico4.png">
+                                                <p>适合零基础报考，学习时间较少，根据考试周期需要过全科或单科的学员，性价比高通关有保障 </p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                班型特色
+                                            </div>
+                                            <ul class="fl bxjs">
+                                                <li><span></span>1.集中周末多轮上课</li>
+                                                <li><span></span>2.强化记忆，迅速提分！</li>
+                                                <li><span></span>3.赠送高清精讲课强化技巧课 </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn clearfix">
+                                        <a href="" class="fl">咨询价格</a>
+                                        <a href="" class="fr">在线咨询</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="swiper-title">
+                                        <span>面授</span>
+                                        <h4>全程集训班 </h4>
+                                    </div>
+                                    <div class="text">
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                适合学员
+                                            </div>
+                                            <div class="fl yjc">
+                                                <img src="images/ico5.png">
+                                                <p>适合基础薄弱，备考时间充裕，自主性较差，需要老师督学指导制定计划，一次性过全科+增项有强力保障的学员 </p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix line">
+                                            <div class="left-name">
+                                                班型特色
+                                            </div>
+                                            <ul class="fl day">
+                                                <li><span></span>1.完整的课程体系，线上线下相结合提高学习效率</li>
+                                                <li><span></span>2.专属考霸讲师+专配学管师全程跟踪监督</li>
+                                                <li><span></span>3.赠送网课超钻班所有课程和服务</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn clearfix">
+                                        <a href="" class="fl">咨询价格</a>
+                                        <a href="" class="fr">在线咨询</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -368,9 +434,20 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
+    window.onload = function () {
+        console.log(document.cookie.indexOf('777'))
+        if (document.cookie.indexOf('777')==-1) {//未加载过，Cookie内容为空
+            $(".back").css("height",$(document).height());
+            $(".back").css("width",$(document).width());
+            $('.back').show();
+            $('.alert').show()
+            document.cookie="index=777";
+        } else {
+            $('.back').hide();
+            $('.alert').hide()
+        }
+    }
 //    弹出层
-    $(".back").css("height",$(document).height());
-    $(".back").css("width",$(document).width());
     $('.close').on('click',function () {
         $('.back').hide();
         $('.alert').hide()

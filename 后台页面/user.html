@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/message.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body class="layui-layout-body">
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header" id="header">
+        <!-- logo -->
+        <div class="layui-logo">
+            <img src="images/plus/logo.png">
+            <i class="layui-icon cdclose">&#xe65f;</i>
+        </div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <div id="Menu">
+            <ul class="layui-nav top-menu layui-layout-left" lay-filter="top-menu">
+                <li class="layui-nav-item layui-this"><a href="javascript:;">APP管理</a></li>
+            </ul>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href="javascript:;"><i class="layui-icon">&#xe68e;</i>首页</a></li>
+            <li class="layui-nav-item shezhi"><a href="javascript:;"><i class="layui-icon">&#xe612;</i>杨伊_8001</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">密码修改</a></dd>
+                    <dd><a href="javascript:;">安全退出</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧菜单栏 -->
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+
+            <!-- 网站设置 -->
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu">
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">用户管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">订单管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">内容管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">院校管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">广告管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">广告位管理<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">消息推送<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">APP参数设置<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" class="titlater">数据监测<i class="layui-icon nhave">&#xe602;</i><i class="layui-icon have">&#xe61a;</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-body order">
+        <!--标题-->
+        <div class="advtitle">
+            <p>App用户管理</p>
+            <form class="layui-form screen">
+                <div class="layui-inline">
+                    <label class="layui-form-label">所属App：</label>
+                    <div class="layui-input-inline wid1">
+                        <select lay-filter="app">
+                            <option value="1">中业网校ios</option>
+                            <option value="2">考研通ios</option>
+                            <option value="3">八大员</option>
+                            <option value="4">建造师</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 搜索表单 -->
+        <form class="layui-form top-search">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">用户名：</label>
+                    <div class="layui-input-inline wid1">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">联系电话：</label>
+                    <div class="layui-input-inline wid1">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">注册时间：</label>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input showtime" id="starttime" lay-verify="date"
+                               placeholder="请选择开始时间">
+                    </div>
+                    <div class="layui-inline">~</div>
+                    <div class="layui-inline">
+                        <input type="text" class="layui-input showtime" id="endtime" lay-verify="date"
+                               placeholder="请选择结束时间">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <button type="button" class="layui-btn btn-search">搜索</button>
+                </div>
+            </div>
+        </form>
+        <!-- 表格 -->
+        <div class="box">
+            <div class="table-box index1" style="width: 97%;">
+                <div class="list-num">
+                    <div class="fl">当前数据<span class="red">102</span>条</div>
+                    <div class="fr"><a>导出当前数据</a></div>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>联系电话</th>
+                        <th>注册时间</th>
+                        <th>感兴趣课程</th>
+                        <th>微信</th>
+                        <th>QQ</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="layui-btn layui-btn-warm dellist">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box index2" style="width: 97%;display: none">
+                <div class="list-num">
+                    <div class="fl">当前数据<span class="red">102</span>条</div>
+                    <div class="fr"><a>导出当前数据</a></div>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>真实姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>地址</th>
+                        <th>联系电话</th>
+                        <th>学历</th>
+                        <th>职业</th>
+                        <th>培训情况</th>
+                        <th>专业</th>
+                        <th>目标院校</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="layui-btn layui-btn-warm dellist">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box index3" style="width: 97%;display: none">
+                <div class="list-num">
+                    <div class="fl">当前数据<span class="red">102</span>条</div>
+                    <div class="fr"><a>导出当前数据</a></div>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>真实姓名</th>
+                        <th>联系电话</th>
+                        <th>出生日期</th>
+                        <th>城市</th>
+                        <th>注册时间</th>
+                        <th>感兴趣课程</th>
+                        <th>微信</th>
+                        <th>QQ</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="layui-btn layui-btn-warm dellist">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box index4" style="width: 97%;display: none">
+                <div class="list-num">
+                    <div class="fl">当前数据<span class="red">102</span>条</div>
+                    <div class="fr"><a>导出当前数据</a></div>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>真实姓名</th>
+                        <th>联系电话</th>
+                        <th>学历</th>
+                        <th>工作年限</th>
+                        <th>注册时间</th>
+                        <th>感兴趣课程</th>
+                        <th>微信</th>
+                        <th>QQ</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="layui-btn layui-btn-warm dellist">删除</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="layui.js" charset="utf-8"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(function () {
+//			左侧导航
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    })
+    layui.use(['form', 'laydate', 'layer'], function () {
+        var form = layui.form
+            , laydate = layui.laydate
+            , layer = layui.layer;
+        //日历
+        lay('.showtime').each(function () {
+            laydate.render({
+                elem: this
+                , type: 'date'
+            });
+        });
+//        点击对应app显示不同表格
+        form.on('select(app)', function(data){
+            $('.index'+data.value).show().siblings('.table-box').hide();
+        });
+        // 弹窗
+        $('.dellist').on('click', function () {
+            layer.open({
+                type: 1
+                , title: '删除'
+                , closeBtn: false
+                , skin: 'del'
+                ,area: ['350px']
+                , content: '确定要删除该条记录？'
+                , btn: ['确定', '取消']
+            });
+        });
+    });
+</script>
+
+

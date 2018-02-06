@@ -189,7 +189,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .introduce .yjc{margin: 0.2rem 0;width: 84%}
 .introduce .yjc img{width: 0.9rem;display: inline-block;margin-left: 0.15rem;float: left}
-.introduce .yjc p{font-size: 0.24rem;line-height: 0.4rem;margin-left: 0.1rem;width: 71%;display: inline-block}
+.introduce .yjc p{font-size: 0.24rem;line-height: 0.4rem;margin-left: 0.1rem;width: 70%;display: inline-block}
 .introduce .bxjs{margin:0.2rem 0 0.2rem 0.15rem;}
 .introduce .bxjs li{margin-bottom: 0.4rem;font-size: 0.22rem}
 .introduce .bxjs li:last-child{margin: 0}
@@ -334,4 +334,25 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 3px;
 	border: none;
 	font-size: 0.3rem;
+}
+/*全天集训*/
+.day li span{
+	display: inline-block;
+	margin-right: 0.1rem;
+	width: 0.3rem;
+	height: 0.3rem;
+	background: url(../images/ico3.png) no-repeat center;
+	background-size: 0.3rem;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.day li{
+	margin-bottom: 0;
+	padding-left: 0.4rem;
+	position: relative;
+	font-size: 0.22rem;
+	max-width: 3.3rem;
+	margin-left: 0.1rem;
+	margin-bottom: 0.1rem;
 }
